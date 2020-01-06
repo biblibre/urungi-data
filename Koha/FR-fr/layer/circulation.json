@@ -1,0 +1,3405 @@
+{
+  "reports": [],
+  "dashboards": [],
+  "layers": [
+    {
+      "params": {
+        "joins": [
+          {
+            "joinType": "default",
+            "targetCollectionName": "biblioitems",
+            "targetCollectionID": "Ccxnm",
+            "targetElementName": "biblionumber",
+            "targetElementID": "czyp",
+            "sourceCollectionName": "items",
+            "sourceCollectionID": "Cbdkg",
+            "sourceElementName": "biblioitemnumber",
+            "sourceElementID": "bgkw",
+            "joinID": "Jesxb"
+          },
+          {
+            "joinType": "default",
+            "sourceCollectionName": "circu",
+            "sourceCollectionID": "Cants",
+            "sourceElementName": "itemnumber",
+            "sourceElementID": "aqpu",
+            "targetCollectionName": "items",
+            "targetCollectionID": "Cbdkg",
+            "targetElementName": "itemnumber",
+            "targetElementID": "befg",
+            "joinID": "Jbuiy"
+          },
+          {
+            "joinType": "default",
+            "targetCollectionName": "itemtypes",
+            "targetCollectionID": "Cabez",
+            "targetElementName": "itemtype",
+            "targetElementID": "aczi",
+            "sourceCollectionName": "biblioitems",
+            "sourceCollectionID": "Ccxnm",
+            "sourceElementName": "itemtype",
+            "sourceElementID": "dcug",
+            "joinID": "Jbvdy"
+          },
+          {
+            "joinID": "Jabdu",
+            "targetElementID": "awma",
+            "targetElementName": "branchcode",
+            "targetCollectionID": "Cavze",
+            "targetCollectionName": "branches",
+            "sourceElementID": "assn",
+            "sourceElementName": "branchcode",
+            "sourceCollectionID": "Cants",
+            "sourceCollectionName": "circu",
+            "joinType": "default"
+          },
+          {
+            "joinID": "Jackp",
+            "sourceElementID": "bfhf",
+            "sourceElementName": "biblionumber",
+            "sourceCollectionID": "Cbdkg",
+            "sourceCollectionName": "items",
+            "targetElementID": "eflz",
+            "targetElementName": "biblionumber",
+            "targetCollectionID": "Ceetx",
+            "targetCollectionName": "biblio",
+            "joinType": "default"
+          },
+          {
+            "joinID": "Jadyx",
+            "sourceElementID": "bfhf",
+            "sourceElementName": "biblionumber",
+            "sourceCollectionID": "Cbdkg",
+            "sourceCollectionName": "items",
+            "targetElementID": "agyk",
+            "targetElementName": "biblionumber",
+            "targetCollectionID": "Caetm",
+            "targetCollectionName": "biblio_metadata",
+            "joinType": "default"
+          },
+          {
+            "joinType": "default",
+            "targetCollectionName": "borrowers",
+            "targetCollectionID": "Cacpt",
+            "targetElementName": "borrowernumber",
+            "targetElementID": "admk",
+            "sourceCollectionName": "circu",
+            "sourceCollectionID": "Cants",
+            "sourceElementName": "borrowernumber",
+            "sourceElementID": "apve",
+            "joinID": "Jdbri"
+          },
+          {
+            "joinType": "default",
+            "targetCollectionName": "bsort 2",
+            "targetCollectionID": "Cdgye",
+            "targetElementName": "authorised_value",
+            "targetElementID": "dhlu",
+            "sourceCollectionName": "borrowers",
+            "sourceCollectionID": "Cacpt",
+            "sourceElementName": "sort2",
+            "sourceElementID": "chyh",
+            "joinID": "Jdkxe"
+          },
+          {
+            "joinID": "Jabia",
+            "targetElementID": "adpi",
+            "targetElementName": "categorycode",
+            "targetCollectionID": "Cacrs",
+            "targetCollectionName": "categories",
+            "sourceElementID": "bksk",
+            "sourceElementName": "categorycode",
+            "sourceCollectionID": "Cacpt",
+            "sourceCollectionName": "borrowers",
+            "joinType": "default"
+          }
+        ],
+        "schema": [
+          {
+            "elements": [
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "befg",
+                "data_type": "int",
+                "elementLabel": "itemnumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "itemnumber"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bfhf",
+                "data_type": "int",
+                "elementLabel": "biblionumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "biblionumber"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bgkw",
+                "data_type": "int",
+                "elementLabel": "biblioitemnumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "biblioitemnumber"
+              },
+              {
+                "component": 0,
+                "elementRole": "dimension",
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bhmb",
+                "data_type": "varchar",
+                "elementLabel": "barcode",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "barcode"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bixx",
+                "data_type": "date",
+                "elementLabel": "dateaccessioned",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "dateaccessioned"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bjrt",
+                "data_type": "mediumtext",
+                "elementLabel": "booksellerid",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "booksellerid"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bkke",
+                "data_type": "varchar",
+                "elementLabel": "homebranch",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "homebranch"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "blan",
+                "data_type": "decimal",
+                "elementLabel": "price",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "price"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bmub",
+                "data_type": "decimal",
+                "elementLabel": "replacementprice",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "replacementprice"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bnnt",
+                "data_type": "date",
+                "elementLabel": "replacementpricedate",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "replacementpricedate"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bohg",
+                "data_type": "date",
+                "elementLabel": "datelastborrowed",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "datelastborrowed"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bpbl",
+                "data_type": "date",
+                "elementLabel": "datelastseen",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "datelastseen"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bqva",
+                "data_type": "tinyint",
+                "elementLabel": "stack",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "stack"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "brxh",
+                "data_type": "tinyint",
+                "elementLabel": "notforloan",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "notforloan"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bsfu",
+                "data_type": "tinyint",
+                "elementLabel": "itemlost",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "itemlost"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "btpf",
+                "data_type": "datetime",
+                "elementLabel": "itemlost_on",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "itemlost_on"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "buuq",
+                "data_type": "tinyint",
+                "elementLabel": "withdrawn",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "withdrawn"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bvpz",
+                "data_type": "datetime",
+                "elementLabel": "withdrawn_on",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "withdrawn_on"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bwph",
+                "data_type": "varchar",
+                "elementLabel": "itemcallnumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "itemcallnumber"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bxbq",
+                "data_type": "varchar",
+                "elementLabel": "coded_location_qualifier",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "coded_location_qualifier"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "byud",
+                "data_type": "smallint",
+                "elementLabel": "issues",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "issues"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "bzdj",
+                "data_type": "smallint",
+                "elementLabel": "renewals",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "renewals"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "casq",
+                "data_type": "smallint",
+                "elementLabel": "reserves",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "reserves"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cbsr",
+                "data_type": "tinyint",
+                "elementLabel": "restricted",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "restricted"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "ccfp",
+                "data_type": "mediumtext",
+                "elementLabel": "itemnotes",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "itemnotes"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cdbf",
+                "data_type": "mediumtext",
+                "elementLabel": "itemnotes_nonpublic",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "itemnotes_nonpublic"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "ceum",
+                "data_type": "varchar",
+                "elementLabel": "holdingbranch",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "holdingbranch"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cfka",
+                "data_type": "mediumtext",
+                "elementLabel": "paidfor",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "paidfor"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cgvg",
+                "data_type": "timestamp",
+                "elementLabel": "timestamp",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "timestamp"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "chlk",
+                "data_type": "varchar",
+                "elementLabel": "location",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "location"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cipz",
+                "data_type": "varchar",
+                "elementLabel": "permanent_location",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "permanent_location"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cjke",
+                "data_type": "date",
+                "elementLabel": "onloan",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "onloan"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cksf",
+                "data_type": "varchar",
+                "elementLabel": "cn_source",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "cn_source"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cllp",
+                "data_type": "varchar",
+                "elementLabel": "cn_sort",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "cn_sort"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cmav",
+                "data_type": "varchar",
+                "elementLabel": "ccode",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "ccode"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cnvz",
+                "data_type": "text",
+                "elementLabel": "materials",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "materials"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "coor",
+                "data_type": "varchar",
+                "elementLabel": "uri",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "uri"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cpht",
+                "data_type": "tinyint",
+                "elementLabel": "damaged",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "damaged"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cqgx",
+                "data_type": "varchar",
+                "elementLabel": "itype",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "itype"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "crzz",
+                "data_type": "longtext",
+                "elementLabel": "more_subfields_xml",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "more_subfields_xml"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "csct",
+                "data_type": "text",
+                "elementLabel": "enumchron",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "enumchron"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "ctpn",
+                "data_type": "varchar",
+                "elementLabel": "copynumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "copynumber"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "curf",
+                "data_type": "varchar",
+                "elementLabel": "stocknumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "stocknumber"
+              },
+              {
+                "collectionName": "items",
+                "collectionID": "Cbdkg",
+                "elementID": "cvqh",
+                "data_type": "varchar",
+                "elementLabel": "new_status",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "new_status"
+              }
+            ],
+            "component": 1,
+            "top": 13,
+            "left": 617,
+            "collectionID": "Cbdkg",
+            "collectionLabel": "items",
+            "visible": true,
+            "collectionName": "items"
+          },
+          {
+            "elements": [
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "cycu",
+                "data_type": "int",
+                "elementLabel": "biblioitemnumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "biblioitemnumber"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "czyp",
+                "data_type": "int",
+                "elementLabel": "biblionumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "biblionumber"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "danc",
+                "data_type": "mediumtext",
+                "elementLabel": "volume",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "volume"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dbon",
+                "data_type": "mediumtext",
+                "elementLabel": "number",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "number"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dcug",
+                "data_type": "varchar",
+                "elementLabel": "itemtype",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "itemtype"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "ddhu",
+                "data_type": "mediumtext",
+                "elementLabel": "isbn",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "isbn",
+                "elementRole": "dimension",
+                "component": 0
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "deue",
+                "data_type": "mediumtext",
+                "elementLabel": "issn",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "issn"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dfuj",
+                "data_type": "mediumtext",
+                "elementLabel": "ean",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "ean"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dgbv",
+                "data_type": "text",
+                "elementLabel": "publicationyear",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "publicationyear",
+                "elementRole": "dimension",
+                "component": 0
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dhrp",
+                "data_type": "varchar",
+                "elementLabel": "publishercode",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "publishercode"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dipz",
+                "data_type": "date",
+                "elementLabel": "volumedate",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "volumedate"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "djpj",
+                "data_type": "text",
+                "elementLabel": "volumedesc",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "volumedesc"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dkga",
+                "data_type": "timestamp",
+                "elementLabel": "timestamp",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "timestamp"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dlno",
+                "data_type": "varchar",
+                "elementLabel": "illus",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "illus"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dmvz",
+                "data_type": "varchar",
+                "elementLabel": "pages",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "pages"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dnui",
+                "data_type": "mediumtext",
+                "elementLabel": "notes",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "notes"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dott",
+                "data_type": "varchar",
+                "elementLabel": "size",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "size"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dpcj",
+                "data_type": "varchar",
+                "elementLabel": "place",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "place"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dqzp",
+                "data_type": "varchar",
+                "elementLabel": "lccn",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "lccn"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "drab",
+                "data_type": "text",
+                "elementLabel": "url",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "url"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dsbd",
+                "data_type": "varchar",
+                "elementLabel": "cn_source",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "cn_source"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dtvz",
+                "data_type": "varchar",
+                "elementLabel": "cn_class",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "cn_class"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "duca",
+                "data_type": "varchar",
+                "elementLabel": "cn_item",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "cn_item"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dvle",
+                "data_type": "varchar",
+                "elementLabel": "cn_suffix",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "cn_suffix"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dwzr",
+                "data_type": "varchar",
+                "elementLabel": "cn_sort",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "cn_sort"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dxro",
+                "data_type": "varchar",
+                "elementLabel": "agerestriction",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "agerestriction"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dyjq",
+                "data_type": "int",
+                "elementLabel": "totalissues",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "totalissues"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "dzzb",
+                "data_type": "mediumtext",
+                "elementLabel": "collectiontitle",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "collectiontitle"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "ease",
+                "data_type": "mediumtext",
+                "elementLabel": "collectionissn",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "collectionissn"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "ebsl",
+                "data_type": "mediumtext",
+                "elementLabel": "collectionvolume",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "collectionvolume"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "ecev",
+                "data_type": "text",
+                "elementLabel": "editionstatement",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "editionstatement"
+              },
+              {
+                "collectionName": "biblioitems",
+                "collectionID": "Ccxnm",
+                "elementID": "educ",
+                "data_type": "text",
+                "elementLabel": "editionresponsibility",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "editionresponsibility"
+              }
+            ],
+            "component": 1,
+            "top": 271,
+            "left": 908,
+            "collectionID": "Ccxnm",
+            "collectionLabel": "biblioitems",
+            "visible": true,
+            "collectionName": "biblioitems"
+          },
+          {
+            "elements": [
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "eflz",
+                "data_type": "int",
+                "elementLabel": "biblionumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "biblionumber"
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "egdu",
+                "data_type": "mediumtext",
+                "elementLabel": "author",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "author",
+                "elementRole": "dimension",
+                "component": 0
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "ehqz",
+                "data_type": "mediumtext",
+                "elementLabel": "title",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "title",
+                "elementRole": "dimension",
+                "component": 0
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "eiuz",
+                "data_type": "mediumtext",
+                "elementLabel": "unititle",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "unititle"
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "ejmo",
+                "data_type": "mediumtext",
+                "elementLabel": "notes",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "notes"
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "ekre",
+                "data_type": "tinyint",
+                "elementLabel": "serial",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "serial"
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "elvk",
+                "data_type": "mediumtext",
+                "elementLabel": "seriestitle",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "seriestitle"
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "emmx",
+                "data_type": "smallint",
+                "elementLabel": "copyrightdate",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "copyrightdate"
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "enee",
+                "data_type": "timestamp",
+                "elementLabel": "timestamp",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "timestamp"
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "eojz",
+                "data_type": "mediumtext",
+                "elementLabel": "abstract",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "abstract"
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "epcm",
+                "data_type": "date",
+                "elementLabel": "datecreated",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "datecreated"
+              },
+              {
+                "collectionName": "biblio",
+                "collectionID": "Ceetx",
+                "elementID": "eqii",
+                "data_type": "varchar",
+                "elementLabel": "frameworkcode",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "frameworkcode"
+              }
+            ],
+            "component": 1,
+            "top": 3,
+            "left": 907,
+            "collectionID": "Ceetx",
+            "collectionLabel": "biblio",
+            "visible": true,
+            "collectionName": "biblio"
+          },
+          {
+            "elements": [
+              {
+                "elementName": "itemtype",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "itemtype",
+                "data_type": "varchar",
+                "elementID": "aczi",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "component": 0,
+                "elementRole": "dimension",
+                "elementName": "description",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "itemtype description",
+                "data_type": "mediumtext",
+                "elementID": "adyp",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "rentalcharge",
+                "elementType": "number",
+                "visible": true,
+                "elementLabel": "rentalcharge",
+                "data_type": "decimal",
+                "elementID": "aehq",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "defaultreplacecost",
+                "elementType": "number",
+                "visible": true,
+                "elementLabel": "defaultreplacecost",
+                "data_type": "decimal",
+                "elementID": "afoi",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "processfee",
+                "elementType": "number",
+                "visible": true,
+                "elementLabel": "processfee",
+                "data_type": "decimal",
+                "elementID": "aghh",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "notforloan",
+                "elementType": "number",
+                "visible": true,
+                "elementLabel": "notforloan",
+                "data_type": "smallint",
+                "elementID": "ahon",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "imageurl",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "imageurl",
+                "data_type": "char",
+                "elementID": "aiez",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "summary",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "summary",
+                "data_type": "text",
+                "elementID": "ajgi",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "checkinmsg",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "checkinmsg",
+                "data_type": "varchar",
+                "elementID": "akaj",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "checkinmsgtype",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "checkinmsgtype",
+                "data_type": "char",
+                "elementID": "aljf",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "sip_media_type",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "sip_media_type",
+                "data_type": "varchar",
+                "elementID": "amko",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "hideinopac",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "hideinopac",
+                "data_type": "tinyint",
+                "elementID": "anoz",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              },
+              {
+                "elementName": "searchcategory",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "searchcategory",
+                "data_type": "varchar",
+                "elementID": "aomr",
+                "collectionID": "Cabez",
+                "collectionName": "itemtypes"
+              }
+            ],
+            "collectionName": "itemtypes",
+            "visible": true,
+            "collectionLabel": "itemtypes",
+            "collectionID": "Cabez",
+            "left": 1181,
+            "top": 354,
+            "component": 1
+          },
+          {
+            "elements": [
+              {
+                "elementName": "categorycode",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "categorycode",
+                "data_type": "varchar",
+                "elementID": "adpi",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "component": 0,
+                "elementRole": "dimension",
+                "elementName": "description",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "Category description",
+                "data_type": "mediumtext",
+                "elementID": "aelv",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "enrolmentperiod",
+                "elementType": "number",
+                "visible": true,
+                "elementLabel": "enrolmentperiod",
+                "data_type": "smallint",
+                "elementID": "afjg",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "enrolmentperioddate",
+                "elementType": "date",
+                "visible": true,
+                "elementLabel": "enrolmentperioddate",
+                "data_type": "date",
+                "elementID": "agxv",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "upperagelimit",
+                "elementType": "number",
+                "visible": true,
+                "elementLabel": "upperagelimit",
+                "data_type": "smallint",
+                "elementID": "ahej",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "dateofbirthrequired",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "dateofbirthrequired",
+                "data_type": "tinyint",
+                "elementID": "aimf",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "finetype",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "finetype",
+                "data_type": "varchar",
+                "elementID": "ajqp",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "bulk",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "bulk",
+                "data_type": "tinyint",
+                "elementID": "akqy",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "enrolmentfee",
+                "elementType": "number",
+                "visible": true,
+                "elementLabel": "enrolmentfee",
+                "data_type": "decimal",
+                "elementID": "alsn",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "overduenoticerequired",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "overduenoticerequired",
+                "data_type": "tinyint",
+                "elementID": "amof",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "issuelimit",
+                "elementType": "number",
+                "visible": true,
+                "elementLabel": "issuelimit",
+                "data_type": "smallint",
+                "elementID": "ankg",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "reservefee",
+                "elementType": "number",
+                "visible": true,
+                "elementLabel": "reservefee",
+                "data_type": "decimal",
+                "elementID": "aoot",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "hidelostitems",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "hidelostitems",
+                "data_type": "tinyint",
+                "elementID": "apdj",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "category_type",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "category_type",
+                "data_type": "char",
+                "elementID": "aqqx",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "default_privacy",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "default_privacy",
+                "data_type": "enum",
+                "elementID": "arub",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "checkprevcheckout",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "checkprevcheckout",
+                "data_type": "varchar",
+                "elementID": "asmy",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              },
+              {
+                "elementName": "BlockExpiredPatronOpacActions",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "BlockExpiredPatronOpacActions",
+                "data_type": "tinyint",
+                "elementID": "atft",
+                "collectionID": "Cacrs",
+                "collectionName": "categories"
+              }
+            ],
+            "collectionName": "categories",
+            "visible": true,
+            "collectionLabel": "categories",
+            "collectionID": "Cacrs",
+            "left": 655,
+            "top": 948,
+            "component": 1
+          },
+          {
+            "elements": [
+              {
+                "elementName": "branchcode",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchcode",
+                "data_type": "varchar",
+                "elementID": "awma",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "component": 0,
+                "elementRole": "dimension",
+                "elementName": "branchname",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchname",
+                "data_type": "mediumtext",
+                "elementID": "axip",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchaddress1",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchaddress1",
+                "data_type": "mediumtext",
+                "elementID": "ayip",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchaddress2",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchaddress2",
+                "data_type": "mediumtext",
+                "elementID": "azsq",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchaddress3",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchaddress3",
+                "data_type": "mediumtext",
+                "elementID": "bark",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchzip",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchzip",
+                "data_type": "varchar",
+                "elementID": "bblg",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchcity",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchcity",
+                "data_type": "mediumtext",
+                "elementID": "bcmr",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchstate",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchstate",
+                "data_type": "mediumtext",
+                "elementID": "bdre",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchcountry",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchcountry",
+                "data_type": "text",
+                "elementID": "betm",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchphone",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchphone",
+                "data_type": "mediumtext",
+                "elementID": "bfkz",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchfax",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchfax",
+                "data_type": "mediumtext",
+                "elementID": "bgrw",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchemail",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchemail",
+                "data_type": "mediumtext",
+                "elementID": "bhuj",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchreplyto",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchreplyto",
+                "data_type": "mediumtext",
+                "elementID": "bini",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchreturnpath",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchreturnpath",
+                "data_type": "mediumtext",
+                "elementID": "bjar",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchurl",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchurl",
+                "data_type": "mediumtext",
+                "elementID": "bkgu",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "issuing",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "issuing",
+                "data_type": "tinyint",
+                "elementID": "blbm",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchip",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchip",
+                "data_type": "varchar",
+                "elementID": "bmzr",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchprinter",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchprinter",
+                "data_type": "varchar",
+                "elementID": "bnme",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "branchnotes",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "branchnotes",
+                "data_type": "mediumtext",
+                "elementID": "bosp",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "opac_info",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "opac_info",
+                "data_type": "text",
+                "elementID": "bpqj",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "geolocation",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "geolocation",
+                "data_type": "varchar",
+                "elementID": "bqxy",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              },
+              {
+                "elementName": "marcorgcode",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "marcorgcode",
+                "data_type": "varchar",
+                "elementID": "brvb",
+                "collectionID": "Cavze",
+                "collectionName": "branches"
+              }
+            ],
+            "collectionName": "branches",
+            "visible": true,
+            "collectionLabel": "branches",
+            "collectionID": "Cavze",
+            "left": 314,
+            "top": 85,
+            "folded": true,
+            "component": 1
+          },
+          {
+            "elements": [
+              {
+                "elementName": "id",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "id",
+                "data_type": "int",
+                "elementID": "afkw",
+                "collectionID": "Caetm",
+                "collectionName": "biblio_metadata"
+              },
+              {
+                "elementName": "biblionumber",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "biblionumber",
+                "data_type": "int",
+                "elementID": "agyk",
+                "collectionID": "Caetm",
+                "collectionName": "biblio_metadata"
+              },
+              {
+                "elementName": "format",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "format",
+                "data_type": "varchar",
+                "elementID": "ahze",
+                "collectionID": "Caetm",
+                "collectionName": "biblio_metadata"
+              },
+              {
+                "elementName": "marcflavour",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "marcflavour",
+                "data_type": "varchar",
+                "elementID": "aixh",
+                "collectionID": "Caetm",
+                "collectionName": "biblio_metadata"
+              },
+              {
+                "elementName": "metadata",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "metadata",
+                "data_type": "longtext",
+                "elementID": "ajra",
+                "collectionID": "Caetm",
+                "collectionName": "biblio_metadata"
+              },
+              {
+                "elementName": "timestamp",
+                "elementType": "date",
+                "visible": true,
+                "elementLabel": "timestamp",
+                "data_type": "timestamp",
+                "elementID": "akcu",
+                "collectionID": "Caetm",
+                "collectionName": "biblio_metadata"
+              }
+            ],
+            "collectionName": "biblio_metadata",
+            "visible": true,
+            "collectionLabel": "biblio_metadata",
+            "collectionID": "Caetm",
+            "left": 1171,
+            "top": 13,
+            "component": 1
+          },
+          {
+            "elements": [
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "defaultAggregation": "count",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "aofh",
+                "elementLabel": "Circulation",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "issue_id"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "defaultAggregation": "count",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "apve",
+                "elementLabel": "Adhérent",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "borrowernumber"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "defaultAggregation": "count",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "aqpu",
+                "elementLabel": "Exemplaire",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "itemnumber"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "arzh",
+                "elementLabel": "Date retour prévu",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "date_due"
+              },
+              {
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "assn",
+                "elementLabel": "branchcode",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "branchcode"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "atdx",
+                "elementLabel": "Date retour effectif",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "returndate"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "auip",
+                "elementLabel": "Dernier renouvellement",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "lastreneweddate"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "avsp",
+                "elementLabel": "Nb renouvellements",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "renewals"
+              },
+              {
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "awoe",
+                "elementLabel": "auto_renew",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "auto_renew"
+              },
+              {
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "axzr",
+                "elementLabel": "auto_renew_error",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "auto_renew_error"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "ayov",
+                "elementLabel": "timestamp",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "timestamp"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "azmv",
+                "elementLabel": "Prêt",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "issuedate"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "baoh",
+                "elementLabel": "Prêt sur place",
+                "visible": true,
+                "elementType": "number",
+                "elementName": "onsite_checkout"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "bbkf",
+                "elementLabel": "Note",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "note"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "circu",
+                "collectionID": "Cants",
+                "elementID": "bcuv",
+                "elementLabel": "Date note",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "notedate"
+              }
+            ],
+            "component": 1,
+            "top": 5,
+            "left": 13,
+            "collectionID": "Cants",
+            "sqlQuery": "SELECT issue_id,borrowernumber,itemnumber,date_due,branchcode,returndate,lastreneweddate,renewals,auto_renew,auto_renew_error,timestamp,issuedate,onsite_checkout,note, notedate FROM issues",
+            "isSQL": true,
+            "collectionLabel": "circu",
+            "visible": true,
+            "collectionName": "circu"
+          },
+          {
+            "elements": [
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "admk",
+                "data_type": "int",
+                "elementLabel": "borrowernumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "borrowernumber"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "aema",
+                "data_type": "varchar",
+                "elementLabel": "Carte adhérent",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "cardnumber"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "afjw",
+                "data_type": "mediumtext",
+                "elementLabel": "Nom",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "surname"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "agol",
+                "data_type": "text",
+                "elementLabel": "Prénom",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "firstname"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "ahuz",
+                "data_type": "mediumtext",
+                "elementLabel": "title",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "title"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "aixl",
+                "data_type": "mediumtext",
+                "elementLabel": "othernames",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "othernames"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "ajrk",
+                "data_type": "text",
+                "elementLabel": "initials",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "initials"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "akjx",
+                "data_type": "char",
+                "elementLabel": "streetnumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "streetnumber"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "alzl",
+                "data_type": "char",
+                "elementLabel": "streettype",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "streettype"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "amou",
+                "data_type": "mediumtext",
+                "elementLabel": "address",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "address"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "antg",
+                "data_type": "text",
+                "elementLabel": "address2",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "address2"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "aodh",
+                "data_type": "mediumtext",
+                "elementLabel": "Ville",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "city"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "apvs",
+                "data_type": "mediumtext",
+                "elementLabel": "state",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "state"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "aqju",
+                "data_type": "varchar",
+                "elementLabel": "Code postal",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "zipcode"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "arcs",
+                "data_type": "text",
+                "elementLabel": "Pays",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "country"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "asqk",
+                "data_type": "mediumtext",
+                "elementLabel": "Email",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "email"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "atts",
+                "data_type": "text",
+                "elementLabel": "phone",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "phone"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "aubc",
+                "data_type": "varchar",
+                "elementLabel": "mobile",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "mobile"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "avot",
+                "data_type": "mediumtext",
+                "elementLabel": "fax",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "fax"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "awgk",
+                "data_type": "text",
+                "elementLabel": "emailpro",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "emailpro"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "axzj",
+                "data_type": "text",
+                "elementLabel": "phonepro",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "phonepro"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "aypl",
+                "data_type": "char",
+                "elementLabel": "B_streetnumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "B_streetnumber"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "azhw",
+                "data_type": "char",
+                "elementLabel": "B_streettype",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "B_streettype"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "baxc",
+                "data_type": "varchar",
+                "elementLabel": "B_address",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "B_address"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bbki",
+                "data_type": "text",
+                "elementLabel": "B_address2",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "B_address2"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bcco",
+                "data_type": "mediumtext",
+                "elementLabel": "B_city",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "B_city"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bdpv",
+                "data_type": "mediumtext",
+                "elementLabel": "B_state",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "B_state"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "befr",
+                "data_type": "varchar",
+                "elementLabel": "B_zipcode",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "B_zipcode"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bfdq",
+                "data_type": "text",
+                "elementLabel": "B_country",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "B_country"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bgvr",
+                "data_type": "text",
+                "elementLabel": "B_email",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "B_email"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bhez",
+                "data_type": "mediumtext",
+                "elementLabel": "B_phone",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "B_phone"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "biwd",
+                "data_type": "date",
+                "elementLabel": "Date de naissance",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "dateofbirth"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bjfn",
+                "data_type": "varchar",
+                "elementLabel": "Bibliothèque adhérent",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "branchcode"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bksk",
+                "data_type": "varchar",
+                "elementLabel": "Code catégorie",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "categorycode"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "blce",
+                "data_type": "date",
+                "elementLabel": "Date inscription",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "dateenrolled"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bmvx",
+                "data_type": "date",
+                "elementLabel": "Date expiération",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "dateexpiry"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bnuj",
+                "data_type": "date",
+                "elementLabel": "Date renouvellement",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "date_renewed"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bozq",
+                "data_type": "tinyint",
+                "elementLabel": "gonenoaddress",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "gonenoaddress"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bpva",
+                "data_type": "tinyint",
+                "elementLabel": "lost",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "lost"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bqkn",
+                "data_type": "date",
+                "elementLabel": "debarred",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "debarred"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "brnl",
+                "data_type": "varchar",
+                "elementLabel": "debarredcomment",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "debarredcomment"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bsap",
+                "data_type": "mediumtext",
+                "elementLabel": "contactname",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "contactname"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "btjq",
+                "data_type": "text",
+                "elementLabel": "contactfirstname",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "contactfirstname"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bupk",
+                "data_type": "text",
+                "elementLabel": "contacttitle",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "contacttitle"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bvrm",
+                "data_type": "int",
+                "elementLabel": "guarantorid",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "guarantorid"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bwjx",
+                "data_type": "mediumtext",
+                "elementLabel": "borrowernotes",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "borrowernotes"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bxhj",
+                "data_type": "varchar",
+                "elementLabel": "relationship",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "relationship"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "byvh",
+                "data_type": "varchar",
+                "elementLabel": "ethnicity",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "ethnicity"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "bznw",
+                "data_type": "varchar",
+                "elementLabel": "ethnotes",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "ethnotes"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "caqq",
+                "data_type": "char",
+                "elementLabel": "Sexe",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "sex"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cbvb",
+                "data_type": "varchar",
+                "elementLabel": "password",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "password"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "ccgl",
+                "data_type": "int",
+                "elementLabel": "flags",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "flags"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cdpc",
+                "data_type": "varchar",
+                "elementLabel": "userid",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "userid"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cekd",
+                "data_type": "mediumtext",
+                "elementLabel": "opacnote",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "opacnote"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cfzj",
+                "data_type": "varchar",
+                "elementLabel": "contactnote",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "contactnote"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cgea",
+                "data_type": "varchar",
+                "elementLabel": "Code statistique 1",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "sort1"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "chyh",
+                "data_type": "varchar",
+                "elementLabel": "Code statistique 2",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "sort2"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "ciqe",
+                "data_type": "varchar",
+                "elementLabel": "altcontactfirstname",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "altcontactfirstname"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cjbo",
+                "data_type": "varchar",
+                "elementLabel": "altcontactsurname",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "altcontactsurname"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "ckxs",
+                "data_type": "varchar",
+                "elementLabel": "altcontactaddress1",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "altcontactaddress1"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "club",
+                "data_type": "varchar",
+                "elementLabel": "altcontactaddress2",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "altcontactaddress2"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cmkz",
+                "data_type": "varchar",
+                "elementLabel": "altcontactaddress3",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "altcontactaddress3"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cnxl",
+                "data_type": "mediumtext",
+                "elementLabel": "altcontactstate",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "altcontactstate"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "coat",
+                "data_type": "varchar",
+                "elementLabel": "altcontactzipcode",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "altcontactzipcode"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cptx",
+                "data_type": "text",
+                "elementLabel": "altcontactcountry",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "altcontactcountry"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cqkt",
+                "data_type": "varchar",
+                "elementLabel": "altcontactphone",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "altcontactphone"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cruf",
+                "data_type": "varchar",
+                "elementLabel": "smsalertnumber",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "smsalertnumber"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cszm",
+                "data_type": "int",
+                "elementLabel": "sms_provider_id",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "sms_provider_id"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cteg",
+                "data_type": "int",
+                "elementLabel": "privacy",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "privacy"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cuvr",
+                "data_type": "tinyint",
+                "elementLabel": "privacy_guarantor_checkouts",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "privacy_guarantor_checkouts"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cvsw",
+                "data_type": "varchar",
+                "elementLabel": "checkprevcheckout",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "checkprevcheckout"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cwpv",
+                "data_type": "timestamp",
+                "elementLabel": "updated_on",
+                "visible": true,
+                "elementType": "date",
+                "elementName": "updated_on"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cxtc",
+                "data_type": "datetime",
+                "elementLabel": "lastseen",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "lastseen"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "cypq",
+                "data_type": "varchar",
+                "elementLabel": "lang",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "lang"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "czsh",
+                "data_type": "int",
+                "elementLabel": "login_attempts",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "login_attempts"
+              },
+              {
+                "collectionName": "borrowers",
+                "collectionID": "Cacpt",
+                "elementID": "dasl",
+                "data_type": "text",
+                "elementLabel": "overdrive_auth_token",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "overdrive_auth_token"
+              }
+            ],
+            "component": 1,
+            "top": 163,
+            "left": 336,
+            "collectionID": "Cacpt",
+            "collectionLabel": "borrowers",
+            "visible": true,
+            "collectionName": "borrowers"
+          },
+          {
+            "elements": [
+              {
+                "collectionName": "bsort1",
+                "collectionID": "Cddpl",
+                "elementID": "defx",
+                "elementLabel": "authorised_value",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "authorised_value"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "bsort1",
+                "collectionID": "Cddpl",
+                "elementID": "dfpn",
+                "elementLabel": "Description stat 1",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "lib"
+              }
+            ],
+            "component": 2,
+            "top": 1210,
+            "left": 661,
+            "collectionID": "Cddpl",
+            "sqlQuery": "SELECT authorised_value,lib FROM authorised_values WHERE category='Bsort1'",
+            "isSQL": true,
+            "collectionLabel": "bsort1",
+            "visible": true,
+            "collectionName": "bsort1"
+          },
+          {
+            "elements": [
+              {
+                "collectionName": "bsort 2",
+                "collectionID": "Cdgye",
+                "elementID": "dhlu",
+                "elementLabel": "authorised_value",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "authorised_value"
+              },
+              {
+                "component": 1,
+                "elementRole": "dimension",
+                "collectionName": "bsort 2",
+                "collectionID": "Cdgye",
+                "elementID": "divu",
+                "elementLabel": "Description stat 2",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "lib"
+              }
+            ],
+            "component": 1,
+            "top": 1297,
+            "left": 666,
+            "collectionID": "Cdgye",
+            "sqlQuery": "SELECT authorised_value,lib FROM authorised_values WHERE category='Bsort2'",
+            "isSQL": true,
+            "collectionLabel": "bsort 2",
+            "visible": true,
+            "collectionName": "bsort 2"
+          }
+        ]
+      },
+      "_id": "5b9d8ab6c7f6f5315646ee2b",
+      "status": "active",
+      "name": "Circulation",
+      "companyID": "COMPID",
+      "nd_trash_deleted": false,
+      "__v": 0,
+      "objects": [
+        {
+          "component": 1,
+          "elementRole": "dimension",
+          "defaultAggregation": "count",
+          "collectionName": "circu",
+          "collectionID": "Cants",
+          "elementID": "aofh",
+          "elementLabel": "Circulation",
+          "visible": true,
+          "elementType": "number",
+          "elementName": "issue_id"
+        },
+        {
+          "component": 1,
+          "elementRole": "dimension",
+          "defaultAggregation": "count",
+          "collectionName": "circu",
+          "collectionID": "Cants",
+          "elementID": "apve",
+          "elementLabel": "Adhérent",
+          "visible": true,
+          "elementType": "number",
+          "elementName": "borrowernumber"
+        },
+        {
+          "component": 1,
+          "elementRole": "dimension",
+          "defaultAggregation": "count",
+          "collectionName": "circu",
+          "collectionID": "Cants",
+          "elementID": "aqpu",
+          "elementLabel": "Exemplaire",
+          "visible": true,
+          "elementType": "number",
+          "elementName": "itemnumber"
+        },
+        {
+          "component": 1,
+          "elementRole": "dimension",
+          "collectionName": "circu",
+          "collectionID": "Cants",
+          "elementID": "avsp",
+          "elementLabel": "Nb renouvellements",
+          "visible": true,
+          "elementType": "number",
+          "elementName": "renewals"
+        },
+        {
+          "component": 1,
+          "elementRole": "dimension",
+          "collectionName": "circu",
+          "collectionID": "Cants",
+          "elementID": "baoh",
+          "elementLabel": "Prêt sur place",
+          "visible": true,
+          "elementType": "number",
+          "elementName": "onsite_checkout"
+        },
+        {
+          "elements": [
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "circu",
+              "collectionID": "Cants",
+              "elementID": "azmv",
+              "elementLabel": "Prêt",
+              "visible": true,
+              "elementType": "date",
+              "elementName": "issuedate"
+            },
+            {
+              "isCustom": true,
+              "elementID": "abay",
+              "viewExpression": "YEAR(#azmv)",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "Année prêt",
+              "elementType": "number",
+              "expression": "YEAR(azmv)",
+              "elementRole": "dimension"
+            },
+            {
+              "isCustom": true,
+              "elementID": "acwh",
+              "viewExpression": "MONTH(#azmv)",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "elementLabel": "Mois prêt",
+              "component": 1,
+              "expression": "MONTH(azmv)",
+              "elementRole": "dimension",
+              "elementType": "number"
+            },
+            {
+              "isCustom": true,
+              "elementID": "aenm",
+              "viewExpression": "DAYOFWEEK(#azmv)",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "elementLabel": "Jour prêt",
+              "component": 1,
+              "expression": "DAYOFWEEK(azmv)",
+              "elementRole": "dimension",
+              "elementType": "number"
+            },
+            {
+              "isCustom": true,
+              "elementID": "adzk",
+              "viewExpression": "CONCAT(YEAR(#azmv),'-',MONTH(#azmv))",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "Année-Mois prêt",
+              "elementType": "string",
+              "expression": "CONCAT(YEAR(azmv),'-',MONTH(azmv))",
+              "elementRole": "dimension"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "circu",
+              "collectionID": "Cants",
+              "elementID": "arzh",
+              "elementLabel": "Retour prévu",
+              "visible": true,
+              "elementType": "date",
+              "elementName": "date_due"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "circu",
+              "collectionID": "Cants",
+              "elementID": "atdx",
+              "elementLabel": "Retour effectif",
+              "visible": true,
+              "elementType": "date",
+              "elementName": "returndate"
+            },
+            {
+              "isCustom": true,
+              "elementID": "afez",
+              "viewExpression": "YEAR(#atdx)",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "elementLabel": "Année retour",
+              "elementType": "number",
+              "component": 1,
+              "expression": "YEAR(atdx)",
+              "elementRole": "dimension"
+            },
+            {
+              "isCustom": true,
+              "elementID": "agcn",
+              "viewExpression": "MONTH(#atdx)",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "Mois retour",
+              "elementType": "number",
+              "expression": "MONTH(atdx)",
+              "elementRole": "dimension"
+            },
+            {
+              "isCustom": true,
+              "elementID": "ahtd",
+              "viewExpression": "CONCAT(YEAR(#atdx),'-',MONTH(#atdx))",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "elementLabel": "Année-Mois retour",
+              "elementType": "string",
+              "component": 1,
+              "expression": "CONCAT(YEAR(atdx),'-',MONTH(atdx))",
+              "elementRole": "dimension"
+            },
+            {
+              "isCustom": true,
+              "elementID": "aicv",
+              "viewExpression": "DAYOFWEEK(#atdx)",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "Jour retour",
+              "elementType": "number",
+              "expression": "DAYOFWEEK(atdx)",
+              "elementRole": "dimension"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "circu",
+              "collectionID": "Cants",
+              "elementID": "auip",
+              "elementLabel": "Dernier renouvellement",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "lastreneweddate"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "circu",
+              "collectionID": "Cants",
+              "elementID": "ayov",
+              "elementLabel": "timestamp",
+              "visible": true,
+              "elementType": "date",
+              "elementName": "timestamp"
+            },
+            {
+              "elementRole": "dimension",
+              "elementType": "number",
+              "elementLabel": "Durée prêt",
+              "expression": "DATEDIFF(arzh,azmv)",
+              "component": 1,
+              "elementName": "comp",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "viewExpression": "DATEDIFF(#arzh,#azmv)",
+              "elementID": "abuf",
+              "isCustom": true
+            }
+          ],
+          "editing": false,
+          "elementID": "Fabzp",
+          "elementRole": "folder",
+          "elementLabel": "Dates"
+        },
+        {
+          "elements": [
+            {
+              "collectionName": "biblio",
+              "collectionID": "Ceetx",
+              "elementID": "ehqz",
+              "data_type": "mediumtext",
+              "elementLabel": "Titre",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "title",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "collectionName": "biblio",
+              "collectionID": "Ceetx",
+              "elementID": "egdu",
+              "data_type": "mediumtext",
+              "elementLabel": "Auteur",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "author",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "elements": [
+                {
+                  "collectionName": "biblioitems",
+                  "collectionID": "Ccxnm",
+                  "elementID": "ddhu",
+                  "data_type": "mediumtext",
+                  "elementLabel": "ISBN",
+                  "visible": true,
+                  "elementType": "string",
+                  "elementName": "isbn",
+                  "elementRole": "dimension",
+                  "component": 1
+                },
+                {
+                  "collectionName": "biblioitems",
+                  "collectionID": "Ccxnm",
+                  "elementID": "dgbv",
+                  "data_type": "text",
+                  "elementLabel": "Année publication",
+                  "visible": true,
+                  "elementType": "string",
+                  "elementName": "publicationyear",
+                  "elementRole": "dimension",
+                  "component": 1
+                },
+                {
+                  "component": 1,
+                  "elementRole": "dimension",
+                  "elementName": "description",
+                  "elementType": "string",
+                  "visible": true,
+                  "elementLabel": "Libellé type doc",
+                  "data_type": "mediumtext",
+                  "elementID": "adyp",
+                  "collectionID": "Cabez",
+                  "collectionName": "itemtypes"
+                },
+                {
+                  "elements": [
+                    {
+                      "component": 1,
+                      "elementRole": "dimension",
+                      "collectionName": "items",
+                      "collectionID": "Cbdkg",
+                      "elementID": "bhmb",
+                      "data_type": "varchar",
+                      "elementLabel": "Code barre",
+                      "visible": true,
+                      "elementType": "string",
+                      "elementName": "barcode"
+                    },
+                    {
+                      "component": 1,
+                      "elementRole": "dimension",
+                      "elementName": "branchname",
+                      "elementType": "string",
+                      "visible": true,
+                      "elementLabel": "Libellé bibliothèque",
+                      "data_type": "mediumtext",
+                      "elementID": "axip",
+                      "collectionID": "Cavze",
+                      "collectionName": "branches"
+                    }
+                  ],
+                  "editing": false,
+                  "elementID": "Faeom",
+                  "elementRole": "folder",
+                  "elementLabel": "Exemplaire"
+                }
+              ],
+              "editing": false,
+              "elementID": "Facaw",
+              "elementRole": "folder",
+              "elementLabel": "Manifestation"
+            }
+          ],
+          "editing": false,
+          "elementID": "Fabrn",
+          "elementRole": "folder",
+          "elementLabel": "Oeuvre"
+        },
+        {
+          "elements": [
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "bksk",
+              "data_type": "varchar",
+              "elementLabel": "Code catégorie",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "categorycode"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "elementName": "description",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "Description catégorie",
+              "data_type": "mediumtext",
+              "elementID": "aelv",
+              "collectionID": "Cacrs",
+              "collectionName": "categories"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "afjw",
+              "data_type": "mediumtext",
+              "elementLabel": "Nom",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "surname"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "bjfn",
+              "data_type": "varchar",
+              "elementLabel": "Bibliothèque adhérent",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "branchcode"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "agol",
+              "data_type": "text",
+              "elementLabel": "Prénom",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "firstname"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "aema",
+              "data_type": "varchar",
+              "elementLabel": "Carte adhérent",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "cardnumber"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "aqju",
+              "data_type": "varchar",
+              "elementLabel": "Code postal",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "zipcode"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "aodh",
+              "data_type": "mediumtext",
+              "elementLabel": "Ville",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "city"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "arcs",
+              "data_type": "text",
+              "elementLabel": "Pays",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "country"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "asqk",
+              "data_type": "mediumtext",
+              "elementLabel": "Email",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "email"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "biwd",
+              "data_type": "date",
+              "elementLabel": "Date de naissance",
+              "visible": true,
+              "elementType": "date",
+              "elementName": "dateofbirth"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "blce",
+              "data_type": "date",
+              "elementLabel": "Date inscription",
+              "visible": true,
+              "elementType": "date",
+              "elementName": "dateenrolled"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "bmvx",
+              "data_type": "date",
+              "elementLabel": "Date expiration",
+              "visible": true,
+              "elementType": "date",
+              "elementName": "dateexpiry"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "bnuj",
+              "data_type": "date",
+              "elementLabel": "Date renouvellement",
+              "visible": true,
+              "elementType": "date",
+              "elementName": "date_renewed"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "caqq",
+              "data_type": "char",
+              "elementLabel": "Sexe",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "sex"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "cgea",
+              "data_type": "varchar",
+              "elementLabel": "Code statistique 1",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "sort1"
+            },
+            {
+              "component": 2,
+              "elementRole": "dimension",
+              "collectionName": "bsort1",
+              "collectionID": "Cddpl",
+              "elementID": "dfpn",
+              "elementLabel": "Description stat 1",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "lib"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "borrowers",
+              "collectionID": "Cacpt",
+              "elementID": "chyh",
+              "data_type": "varchar",
+              "elementLabel": "Code statistique 2",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "sort2"
+            },
+            {
+              "component": 1,
+              "elementRole": "dimension",
+              "collectionName": "bsort 2",
+              "collectionID": "Cdgye",
+              "elementID": "divu",
+              "elementLabel": "Description stat 2",
+              "visible": true,
+              "elementType": "string",
+              "elementName": "lib"
+            }
+          ],
+          "editing": false,
+          "elementID": "Fadzr",
+          "elementRole": "folder",
+          "elementLabel": "Emprunteur"
+        },
+        {
+          "elementLabel": "Champs ralentissant",
+          "elementRole": "folder",
+          "elementID": "Fabvs",
+          "editing": false,
+          "elements": [
+            {
+              "isCustom": true,
+              "elementID": "amgg",
+              "viewExpression": "CASE substring(ExtractValue(#ajra,'//datafield[@tag=\"100\"]/subfield[@code=\"a\"]'),18,1) WHEN 'a'  THEN 'a-Jeunesse (général)' WHEN 'b' THEN 'b-Pré-scolaire' WHEN 'c' THEN 'c-Scolaire' WHEN 'd' THEN 'd-Enfant' WHEN 'e' THEN 'e-Jeune adulte' WHEN 'k' THEN 'k-Adulte haut niveau' WHEN 'm' THEN 'm-Adulte grand public' WHEN 'u' THEN 'u-Inconnu' ELSE '~-Invalide' END",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "Type de public",
+              "elementType": "string",
+              "expression": "CASE substring(ExtractValue(ajra,'//datafield[@tag=\"100\"]/subfield[@code=\"a\"]'),18,1) WHEN 'a'  THEN 'a-Jeunesse (général)' WHEN 'b' THEN 'b-Pré-scolaire' WHEN 'c' THEN 'c-Scolaire' WHEN 'd' THEN 'd-Enfant' WHEN 'e' THEN 'e-Jeune adulte' WHEN 'k' THEN 'k-Adulte haut niveau' WHEN 'm' THEN 'm-Adulte grand public' WHEN 'u' THEN 'u-Inconnu' ELSE '~-Invalide' END",
+              "elementRole": "dimension"
+            },
+            {
+              "isCustom": true,
+              "elementID": "aogv",
+              "viewExpression": "CASE substring(ExtractValue(#ajra,'//leader'),7,1)  WHEN 'a' THEN 'Doc textuel'  WHEN 'b' THEN 'Doc textuel manuscrit' WHEN 'c' THEN 'Partition' WHEN 'd' THEN 'Partition manuscrite' WHEN 'e' THEN 'Carte' WHEN 'f' THEN 'Carte manuscrite' WHEN 'g' THEN 'Vidéo' WHEN 'i' THEN 'Doc sonore non musical' WHEN 'j' THEN 'Doc sonore musical' WHEN 'k' THEN 'Image/Dessin' WHEN 'l' THEN 'Ress. électronique' WHEN 'm' THEN 'Multimédia' WHEN 'r' THEN 'Objet en 3D' ELSE 'Non défini' END",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "elementLabel": "Type de notice label",
+              "elementType": "string",
+              "component": 1,
+              "expression": "CASE substring(ExtractValue(ajra,'//leader'),7,1)  WHEN 'a' THEN 'Doc textuel'  WHEN 'b' THEN 'Doc textuel manuscrit' WHEN 'c' THEN 'Partition' WHEN 'd' THEN 'Partition manuscrite' WHEN 'e' THEN 'Carte' WHEN 'f' THEN 'Carte manuscrite' WHEN 'g' THEN 'Vidéo' WHEN 'i' THEN 'Doc sonore non musical' WHEN 'j' THEN 'Doc sonore musical' WHEN 'k' THEN 'Image/Dessin' WHEN 'l' THEN 'Ress. électronique' WHEN 'm' THEN 'Multimédia' WHEN 'r' THEN 'Objet en 3D' ELSE 'Non défini' END",
+              "elementRole": "dimension"
+            }
+          ]
+        },
+        {
+          "elementLabel": "DLL",
+          "elementRole": "folder",
+          "elementID": "Facmu",
+          "editing": false,
+          "elements": [
+            {
+              "component": 1,
+              "isCustom": true,
+              "elementID": "aqjr",
+              "viewExpression": "CASE WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2) IN ('am', 'ac','om')  THEN 'Livre imprimé' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='as' THEN 'Revue imprimée' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2) IN('gm','gn','gs') THEN 'DVD' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='bm' THEN 'Manuscrit' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2) IN ('jm', 'im' ,'jn') THEN 'CD' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='km' THEN 'Image fixe' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='em' THEN 'Carte imprimée' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='cm' THEN 'Partition imprimée' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2) IN ('mm','ms') THEN 'Doc multimedia multisupport' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='lm' THEN 'Doc électronique' ELSE 'Autre doc' END",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "elementLabel": "Type de doc du label",
+              "elementType": "string",
+              "expression": "CASE WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2) IN ('am', 'ac','om')  THEN 'Livre imprimé' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='as' THEN 'Revue imprimée' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2) IN('gm','gn','gs') THEN 'DVD' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='bm' THEN 'Manuscrit' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2) IN ('jm', 'im' ,'jn') THEN 'CD' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='km' THEN 'Image fixe' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='em' THEN 'Carte imprimée' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='cm' THEN 'Partition imprimée' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2) IN ('mm','ms') THEN 'Doc multimedia multisupport' WHEN SUBSTRING(ExtractValue(#ajra,'//leader'), 7, 2)='lm' THEN 'Doc électronique' ELSE 'Autre doc' END",
+              "elementRole": "dimension"
+            },
+            {
+              "isCustom": true,
+              "elementID": "armp",
+              "viewExpression": "CASE substring(ExtractValue(#ajra,'//datafield[@tag=\"100\"]/subfield[@code=\"a\"]'),18,1) WHEN 'a'  THEN 'Jeunesse' WHEN 'b' THEN 'Jeunesse' WHEN 'c' THEN 'Jeunesse' WHEN 'd' THEN 'Jeunesse' WHEN 'e' THEN 'Adulte' WHEN 'k' THEN 'Adulte' WHEN 'm' THEN 'Adulte' WHEN 'u' THEN '~-Inconnu' ELSE '~-Invalide' END",
+              "dataSourceID": "5b2a494717d5db0dc123c945",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "Adulte ou Jeunesse",
+              "elementType": "string",
+              "expression": "CASE substring(ExtractValue(ajra,'//datafield[@tag=\"100\"]/subfield[@code=\"a\"]'),18,1) WHEN 'a'  THEN 'Jeunesse' WHEN 'b' THEN 'Jeunesse' WHEN 'c' THEN 'Jeunesse' WHEN 'd' THEN 'Jeunesse' WHEN 'e' THEN 'Adulte' WHEN 'k' THEN 'Adulte' WHEN 'm' THEN 'Adulte' WHEN 'u' THEN '~-Inconnu' ELSE '~-Invalide' END",
+              "elementRole": "dimension"
+            }
+          ]
+        },
+        {
+          "component": 1,
+          "elementRole": "dimension",
+          "collectionName": "circu",
+          "collectionID": "Cants",
+          "elementID": "bbkf",
+          "elementLabel": "Note",
+          "visible": true,
+          "elementType": "string",
+          "elementName": "note"
+        },
+        {
+          "component": 1,
+          "elementRole": "dimension",
+          "collectionName": "circu",
+          "collectionID": "Cants",
+          "elementID": "bcuv",
+          "elementLabel": "Date note",
+          "visible": true,
+          "elementType": "string",
+          "elementName": "notedate"
+        }
+      ],
+      "datasourceID": "5c98a2ea2bae1b3c6865a6cb"
+    }
+  ],
+  "datasources": [
+    {
+      "_id": "5c98a2ea2bae1b3c6865a6cb",
+      "connection": {
+        "database": "koha",
+        "port": "3306",
+        "host": "localhost",
+        "password": "o6fvtVUbc2",
+        "userName": "kohaadmin"
+      },
+      "packetSize": 500,
+      "status": 1,
+      "type": "MySQL",
+      "name": "koha",
+      "companyID": "COMPID",
+      "nd_trash_deleted": false,
+      "__v": 0
+    }
+  ]
+}

@@ -1,0 +1,1507 @@
+{
+  "reports": [],
+  "dashboards": [
+    {
+      "history": [],
+      "items": [],
+      "_id": "5d5bb7ff9fa60c13578d054d",
+      "dashboardName": "Audit de votre catalogue dans la transition bibliographique",
+      "backgroundColor": "#999999",
+      "properties": {
+        "designerHTML": "\n\n    <div page-block=\"\" class=\"container-fluid ndContainer ng-scope\" ndtype=\"container\" tc-textcontent=\"true\" data-tc-id=\"w-0.07438895139592738\" style=\"border-width: 1px; border-style: dashed; background: rgb(255, 255, 255) none repeat scroll 0% 0%; margin: 0px 30px;\" contenteditable=\"false\"><div page-block=\"\" class=\"col-md-6 ndContainer\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.9119861831517914\" contenteditable=\"false\"><h3 page-block=\"\" class=\"editable\" ndtype=\"header\" tc-textcontent=\"true\" data-tc-id=\"w-0.5889509499026002\" style=\"background: rgb(255, 255, 255) none repeat scroll 0% 0%; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; color: rgb(71, 74, 116);\" contenteditable=\"true\"></h3><h1 class=\"editable\" data-tc-id=\"w-0.1998415541298949\" style=\"color: rgb(43, 32, 124); font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\" tc-textcontent=\"true\" contenteditable=\"true\">Audit de votre catalogue</h1><div page-block=\"\" class=\"Block500\" ndtype=\"column\" drop=\"onDropObject($data, $event, 'order')\" drop-effect=\"copy\" drop-accept=\"['json/custom-object','json/column']\" tc-textcontent=\"true\" data-tc-id=\"w-0.6567491880037594\" style=\"border-width: 0px; padding: 10px 10px 0px;\" contenteditable=\"false\"><div id=\"PROMPT_eabszrawequal\" page-block=\"\" class=\"ndContainer ng-scope\" ndtype=\"ndPrompt\"><app-filter-prompt is-prompt=\"true\" filter=\"prompts['eabszrawequal']\" on-change=\"promptChanged()\" get-query=\"getQueryForFilter\" class=\"ng-isolate-scope\"><div>\n    <!-- ngIf: !vm.isPrompt -->\n\n    <!-- ngIf: vm.isPrompt --><div ng-if=\"vm.isPrompt\" class=\"ng-scope\">\n        <!-- ngInclude: vm.criteriaInput --><span ng-include=\"vm.criteriaInput\" class=\"ng-scope\"><span class=\"form-inline ng-scope\">\n    <div class=\"form-group\">\n        <!-- ngIf: vm.isPrompt --><label ng-if=\"vm.isPrompt\" class=\"control-label ng-binding ng-scope\"> equal</label><!-- end ngIf: vm.isPrompt -->\n\n        <!-- Date -->\n        <!-- ngIf: (vm.filter.elementType == 'date' && (vm.filter.filterType != 'null' && vm.filter.filterType != 'notNull')) -->\n        <!-- END Date -->\n\n        <!--equal, in, etc ...-->\n        <!-- ngIf: vm.filter.elementType !== 'date' --><span ng-if=\"vm.filter.elementType !== 'date'\" ng-init=\"vm.update()\" class=\"ng-scope\">\n            <!-- ngIf: !(vm.filter.filterType == 'null' || vm.filter.filterType == 'notNull') && ( vm.filter.elementType != 'array') && ( vm.filter.elementType != 'date') && (vm.filter.filterType != 'notIn') && (vm.filter.filterType != 'in') --><span ng-if=\"!(vm.filter.filterType == 'null' || vm.filter.filterType == 'notNull') &amp;&amp; ( vm.filter.elementType != 'array') &amp;&amp; ( vm.filter.elementType != 'date') &amp;&amp; (vm.filter.filterType != 'notIn') &amp;&amp; (vm.filter.filterType != 'in')\" class=\"ng-scope\">\n                <div class=\"input-group\">\n                    <input placeholder=\"\" type=\"text\" class=\"form-control no-right-border form-focus-green ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required\" ng-model=\"vm.criterion.text1\" ng-required=\"vm.filter.promptMandatory == true\" style=\"height: 30px; border-right: 0;\" required=\"required\">\n                    <span class=\"input-group-btn\">\n                        <span class=\"dropdown\">\n                            <button type=\"button\" class=\"btn btn-sm dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"padding: 5px; width: 21px; background-color: #ddd; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;\" uib-tooltip=\"Click here to select a value\" tooltip-placement=\"bottom\">\n                                <i class=\"fa fa-caret-down\"></i>\n                            </button>\n\n                            <ul class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"dropdownMenu5b\">\n                                <!-- ngRepeat: value in vm.values --><li ng-repeat=\"value in vm.values\" class=\"ng-scope\"><a ng-click=\"vm.selectFirstValue(value)\" class=\"ng-binding\">2019-10-17</a></li><!-- end ngRepeat: value in vm.values -->\n                            </ul>\n                        </span>\n\n                        <!-- ngIf: !( vm.isPrompt && vm.filter.promptMandatory ) -->\n                    </span>\n                </div>\n            </span><!-- end ngIf: !(vm.filter.filterType == 'null' || vm.filter.filterType == 'notNull') && ( vm.filter.elementType != 'array') && ( vm.filter.elementType != 'date') && (vm.filter.filterType != 'notIn') && (vm.filter.filterType != 'in') -->\n\n            <!-- ngIf: (vm.filter.filterType == 'notIn' || vm.filter.filterType == 'in') -->\n\n            <!--between-->\n            <span ng-show=\"vm.filter.filterType == 'between' || vm.filter.filterType == 'notBetween'\" translate=\"\" class=\"ng-hide\">AND</span>\n\n            <span class=\"input-group dropdown ng-hide\" uib-dropdown=\"\" ng-show=\"vm.filter.filterType == 'between' || vm.filter.filterType == 'notBetween'\">\n\n                <input placeholder=\"\" type=\"text\" class=\"form-control no-right-border form-focus-green ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required\" ng-model=\"vm.criterion.text2\" ng-required=\"vm.filter.promptMandatory == true\" style=\"height: 30px; border-right: 0;\" required=\"required\">\n\n                <span class=\"input-group-btn\">\n                    <span class=\"dropdown\">\n                        <button type=\"button\" class=\"btn btn-white dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"padding: 5px; width: 21px; background-color: #ddd; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;\" uib-tooltip=\"Click here to select a value\" tooltip-placement=\"bottom\">\n                            <i class=\"fa fa-caret-down\"></i>\n                        </button>\n\n                        <ul class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"dropdownMenu5b\">\n                            <!-- ngRepeat: value in vm.values --><li ng-repeat=\"value in vm.values\" class=\"ng-scope\"><a ng-click=\"vm.selectSecondValue(value)\" class=\"ng-binding\">2019-10-17</a></li><!-- end ngRepeat: value in vm.values -->\n                            <!-- ngIf: vm.filter.promptMandatory != true -->\n                        </ul>\n\n                    </span>\n\n                    <!-- ngIf: !( vm.isPrompt && vm.filter.promptMandatory ) -->\n\n                </span>\n            </span>\n        </span><!-- end ngIf: vm.filter.elementType !== 'date' -->\n\n        <!-- ngIf: vm.isPrompt --><button type=\"button\" class=\"btn btn-sm ng-scope\" ng-if=\"vm.isPrompt\" ng-click=\"vm.inputChanged(vm.filter)\" translate=\"\">Run</button><!-- end ngIf: vm.isPrompt -->\n    </div>\n</span>\n</span>\n    </div><!-- end ngIf: vm.isPrompt -->\n</div>\n</app-filter-prompt></div></div></div><div class=\"col-md-6 ndContainer\" ndtype=\"column\"><h3 page-block=\"\" class=\"editable\" ndtype=\"header\" tc-textcontent=\"true\" data-tc-id=\"w-0.21427453661791107\" style=\"background: rgb(255, 255, 255) none repeat scroll 0% 0%;\" contenteditable=\"true\"><br></h3><p page-block=\"\" class=\"editable\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.4834456561238665\" style=\"font-family: &quot;Arial Black&quot;, Gadget, sans-serif; color: rgb(71, 74, 116);\" contenteditable=\"true\">Ce tableau de bord indique la présence de champs dans les grilles de \ncatalogage qui sont attendus pour la transition bibliographique, la \nquantité de données \"alignées\", des métriques quantitatives de \nrenseignement des notices bibliographiques. <br></p></div></div><div page-block=\"\" class=\"container-fluid ndContainer ng-scope\" ndtype=\"container\" tc-textcontent=\"true\" data-tc-id=\"w-0.7182177278854145\" contenteditable=\"false\"><div page-block=\"\" class=\"col-md-6 ndContainer\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.31421546949105017\" contenteditable=\"false\"><h3 class=\"\" data-tc-id=\"w-0.7289718435437528\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-width: 1px; border-style: solid; padding: 6px;\">Grille de catalogage</h3><p page-block=\"\" class=\"editable\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.5403288193934135\" style=\"color: rgb(71, 74, 116); font-size: 14px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\" contenteditable=\"true\">Présence des champs mentionnés dans la grille de catalogage par défaut de Koha.<br><br></p><div page-block=\"\" class=\"Block500\" ndtype=\"column\" drop=\"onDropObject($data, $event, 'order')\" drop-effect=\"copy\" drop-accept=\"['json/custom-object','json/column']\" tc-textcontent=\"true\" data-tc-id=\"w-0.8257099471515486\" style=\"height: 272px;\" contenteditable=\"false\"><div page-block=\"\" class=\"container-fluid featurette ndContainer ng-scope\" ndtype=\"container\" style=\"height:100%;padding:0px;\"><div page-block=\"\" class=\"col-md-12 ndContainer\" ndtype=\"column\" style=\"height:100%;padding:0px;\"><div page-block=\"\" class=\"container-fluid ng-isolate-scope\" id=\"REPORT_CONTAINER_cd3d3233-a2c2-4aef-95a9-7ae09de64046\" report-view=\"\" report=\"getReport('cd3d3233-a2c2-4aef-95a9-7ae09de64046')\" style=\"padding: 0px; position: relative; height: 100%; font-size: 10px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\" tc-textcontent=\"true\" data-tc-id=\"w-0.1745110190673239\" contenteditable=\"false\"><div class=\"report-view ng-scope\" ng-hide=\"loading\" style=\"height:100%\"><div id=\"REPORT_cd3d3233-a2c2-4aef-95a9-7ae09de64046\" class=\"container-fluid report-container\" style=\"width:100%;padding-left:0px;padding-right:0px;min-height: 200px;background-color: #fff;\"><div  =\"\" style=\"width:100%;overflow-y: auto;border: 1px solid #ccc;align-items: stretch;position: absolute;bottom: 0px;top: 0px;\" class=\"ng-scope\"><div class=\"vs-repeat-before-content\" style=\"width: 100%; height: 0px; min-height: 0px; max-height: 0px;\"></div><!-- ngRepeat: item in $vs_collection --><div ndtype=\"repeaterGridItems\" class=\"repeater-data container-fluid vs-repeat-repeated-element ng-scope\" ng-repeat=\"item in $vs_collection\" style=\"width:100%;padding:0px\"><div class=\"col-md-12 vertical-grid-record-container\"><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">009</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eadpmraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eadpmraw','eadpmraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">✓</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">010$a</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eabzoraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eabzoraw','eabzoraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">✓</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">011$a</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eaczmraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eaczmraw','eaczmraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">✓</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">033$a</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eaehgraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eaehgraw','eaehgraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">✗</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">073$a</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eadefraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eadefraw','eadefraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">✓</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">181$c</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eabyrraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eabyrraw','eabyrraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">✓</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">182$c</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eaccxraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eaccxraw','eaccxraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">✓</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">183$c</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eadoaraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eadoaraw','eadoaraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">✗</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">219</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eaemyraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eaemyraw','eaemyraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">✗</div> </div></div></div></div></div><!-- end ngRepeat: item in $vs_collection --><div class=\"vs-repeat-after-content\" style=\"width: 100%; height: 0px; min-height: 0px; max-height: 0px;\"></div></div></div></div><div ng-show=\"loading\" class=\"container-fluid ng-scope ng-hide\"><h3 class=\"ng-binding\"><img src=\"/images/loader.gif\" width=\"32px\" height=\"32px\">Repainting report ...</h3></div></div></div></div></div></div><div class=\"col-md-6 ndContainer\" ndtype=\"column\"><h3 class=\"\" data-tc-id=\"w-0.25210033775395113\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-width: 1px; border-style: solid; padding: 6px;\">État des notices bibliographiques</h3><p page-block=\"\" class=\"editable\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.35585155293489434\" style=\"font-family: &quot;Arial Black&quot;, Gadget, sans-serif; color: rgb(71, 74, 116); font-size: 14px;\" contenteditable=\"true\">Nombre de notices bibliographique ayant le champs mentionné renseigné (sans notion de qualité de donnée).</p><div page-block=\"\" class=\"Block500\" ndtype=\"column\" drop=\"onDropObject($data, $event, 'order')\" drop-effect=\"copy\" drop-accept=\"['json/custom-object','json/column']\" tc-textcontent=\"true\" data-tc-id=\"w-0.9048530306777826\" style=\"height: 272px;\" contenteditable=\"false\"><div page-block=\"\" class=\"container-fluid featurette ndContainer ng-scope\" ndtype=\"container\" style=\"height:100%;padding:0px;\"><div page-block=\"\" class=\"col-md-12 ndContainer\" ndtype=\"column\" style=\"height:100%;padding:0px;\"><div page-block=\"\" class=\"container-fluid ng-isolate-scope\" id=\"REPORT_CONTAINER_6f770f0c-6687-4d80-ab9e-3c32e15edb33\" report-view=\"\" report=\"getReport('6f770f0c-6687-4d80-ab9e-3c32e15edb33')\" style=\"padding: 0px; position: relative; height: 100%; font-size: 10px; text-align: left; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\" tc-textcontent=\"true\" data-tc-id=\"w-0.39933879510499914\" contenteditable=\"false\"><div class=\"report-view ng-scope\" ng-hide=\"loading\" style=\"height:100%\"><div id=\"REPORT_6f770f0c-6687-4d80-ab9e-3c32e15edb33\" class=\"container-fluid report-container\" style=\"width:100%;padding-left:0px;padding-right:0px;min-height: 200px;background-color: #fff;\"><div vs-repeat=\"\" style=\"width:100%;overflow-y: auto;border: 1px solid #ccc;align-items: stretch;position: absolute;bottom: 0px;top: 0px;\" class=\"ng-scope\"><div class=\"vs-repeat-before-content\" style=\"width: 100%; height: 0px; min-height: 0px; max-height: 0px;\"></div><!-- ngRepeat: item in $vs_collection --><div ndtype=\"repeaterGridItems\" class=\"repeater-data container-fluid vs-repeat-repeated-element ng-scope\" ng-repeat=\"item in $vs_collection\" style=\"width:100%;padding:0px\"><div class=\"col-md-12 vertical-grid-record-container\"><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">Nombre de 033$a</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eaqkrraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eaqkrraw','eaqkrraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">0</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">Nombre de 009</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eapnuraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eapnuraw','eapnuraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">0</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">Nombre de 181$c</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_earttraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'earttraw','earttraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">0</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">Nombre de 182$c</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_easqlraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'easqlraw','easqlraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">0</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">Nombre de 183$c</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eatgzraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eatgzraw','eatgzraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">0</div> </div></div></div><div class=\"col-md-12 vertical-grid-column-container\"><div class=\"col-md-3 vertical-grid-label-column\"><span class=\"report-element-label\">Nombre de 219</span></div><div class=\"col-md-9 vertical-grid-column-value\"><div id=\"ROW_eaulfraw\" class=\"vertical-grid-data-column\" style=\"\" ng-click=\"cellClick('',item,'eaulfraw','eaulfraw')\"><div style=\"overflow:hidden;height:100%;\" class=\"ng-binding\">0</div> </div></div></div></div></div><!-- end ngRepeat: item in $vs_collection --><div class=\"vs-repeat-after-content\" style=\"width: 100%; height: 0px; min-height: 0px; max-height: 0px;\"></div></div></div></div><div ng-show=\"loading\" class=\"container-fluid ng-scope ng-hide\"><h3 class=\"ng-binding\"><img src=\"/images/loader.gif\" width=\"32px\" height=\"32px\">Repainting report ...</h3></div></div></div></div></div></div></div><div page-block=\"\" class=\"container-fluid ndContainer ng-scope\" ndtype=\"container\" tc-textcontent=\"true\" data-tc-id=\"w-0.7488297665932808\" contenteditable=\"false\"><div page-block=\"\" class=\"col-md-6 ndContainer\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.5913446752745112\" contenteditable=\"false\"><h3 class=\"editable\" data-tc-id=\"w-0.5087204925728087\" style=\"font-family: &quot;Arial Black&quot;, Gadget, sans-serif; color: rgb(71, 74, 116); background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-width: 1px; border-style: solid; padding: 6px;\" tc-textcontent=\"true\" contenteditable=\"true\">Alignement</h3><p page-block=\"\" class=\"editable\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.025324936839793866\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 14px;\" contenteditable=\"true\">Pourcentage de notices considérées comme \"alignées\" avec un réservoir \nnational, c'est à dire contenant un ARK BnF en 033$a ou un PPN Sudoc.<br></p><div page-block=\"\" class=\"Block500\" ndtype=\"column\" drop=\"onDropObject($data, $event, 'order')\" drop-effect=\"copy\" drop-accept=\"['json/custom-object','json/column']\" tc-textcontent=\"true\" data-tc-id=\"w-0.8633408727797003\" contenteditable=\"false\"><div page-block=\"\" class=\"container-fluid featurette ndContainer ng-scope\" ndtype=\"container\" style=\"height:100%;padding:0px;\"><div page-block=\"\" class=\"col-md-12 ndContainer\" ndtype=\"column\" style=\"height:100%;padding:0px;\"><div page-block=\"\" class=\"container-fluid ng-isolate-scope\" id=\"REPORT_CONTAINER_2182ff52-a3a7-ab4b-1f1c-0388a036015b\" report-view=\"\" report=\"getReport('2182ff52-a3a7-ab4b-1f1c-0388a036015b')\" style=\"padding:0px;position: relative;height: 100%;font-size:30px;\" tc-textcontent=\"true\" data-tc-id=\"w-0.11085666491629875\" contenteditable=\"false\"><div class=\"report-view ng-scope\" ng-hide=\"loading\" style=\"height:100%\"><div id=\"CHART_5d5bb7ff9fa60c13578d055f-9865adb8-1a72-4a9d-b780-314871026de5\" class=\"c3\" style=\"max-height: 300px; position: relative;\"><svg style=\"overflow: hidden;\" width=\"562.0833740234375\" height=\"300\"><defs><clipPath id=\"c3-1571669312243-clip\"><rect width=\"562.0833740234375\" height=\"275.5500030517578\"></rect></clipPath><clipPath id=\"c3-1571669312243-clip-xaxis\"><rect x=\"-31\" y=\"-20\" width=\"624.0833740234375\" height=\"40.44999694824219\"></rect></clipPath><clipPath id=\"c3-1571669312243-clip-yaxis\"><rect x=\"-29\" y=\"-4\" width=\"20\" height=\"299.5500030517578\"></rect></clipPath><clipPath id=\"c3-1571669312243-clip-grid\"><rect width=\"562.0833740234375\" height=\"275.5500030517578\"></rect></clipPath><clipPath id=\"c3-1571669312243-clip-subchart\"><rect width=\"562.0833740234375\" height=\"0\"></rect></clipPath></defs><g transform=\"translate(0.5,4.5)\"><text class=\"c3-text c3-empty\" text-anchor=\"middle\" dominant-baseline=\"middle\" x=\"281.04168701171875\" y=\"137.7750015258789\" style=\"opacity: 0;\"></text><g clip-path=\"url(http://widestage.clairelab-koha.test.biblibre.eu/#c3-1571669312243-clip)\" class=\"c3-regions\" style=\"visibility: hidden;\"></g><g clip-path=\"url(http://widestage.clairelab-koha.test.biblibre.eu/#c3-1571669312243-clip-grid)\" class=\"c3-grid\" style=\"visibility: hidden;\"><g class=\"c3-xgrid-focus\"><line class=\"c3-xgrid-focus\" x1=\"-10\" x2=\"-10\" y1=\"0\" y2=\"275.5500030517578\" style=\"visibility: hidden;\"></line></g></g><g clip-path=\"url(http://widestage.clairelab-koha.test.biblibre.eu/#c3-1571669312243-clip)\" class=\"c3-chart\"><g class=\"c3-stanford-elements\"><g class=\"c3-stanford-lines\" style=\"shape-rendering: geometricprecision;\"></g><g class=\"c3-stanford-texts\"></g><g class=\"c3-stanford-regions\"></g></g><g class=\"c3-event-rects\" style=\"fill-opacity: 0;\"><rect class=\"c3-event-rect\" x=\"0\" y=\"0\" width=\"562.0833740234375\" height=\"275.5500030517578\"></rect></g><g class=\"c3-chart-bars\"><g class=\"c3-chart-bar c3-target c3-target-eafrdraw\" style=\"pointer-events: none;\"><g class=\"c3-shapes c3-shapes-eafrdraw c3-bars c3-bars-eafrdraw\" style=\"cursor: pointer;\"></g></g></g><g class=\"c3-chart-lines\"><g class=\"c3-chart-line c3-target c3-target-eafrdraw\" style=\"opacity: 1; pointer-events: none;\"><g class=\"c3-shapes c3-shapes-eafrdraw c3-lines c3-lines-eafrdraw\"></g><g class=\"c3-shapes c3-shapes-eafrdraw c3-areas c3-areas-eafrdraw\"></g><g class=\"c3-selected-circles c3-selected-circles-eafrdraw\"></g><g class=\"c3-shapes c3-shapes-eafrdraw c3-circles c3-circles-eafrdraw\" style=\"cursor: pointer;\"></g></g></g><g class=\"c3-chart-arcs\" transform=\"translate(281.04168701171875,254.5500030517578)\"><text class=\"c3-chart-arcs-title\" style=\"text-anchor: middle; opacity: 1;\"></text><g class=\"c3-chart-arcs-background\"><path class=\"c3-chart-arcs-background c3-chart-arcs-background-0\" d=\"M-210.39412746429443,-2.5765849475854842e-14A210.39412746429443,210.39412746429443,0,1,1,210.39412746429443,0L126.23647647857665,0A126.23647647857665,126.23647647857665,0,1,0,-126.23647647857665,-1.5459509685512902e-14Z\"></path></g><text class=\"c3-chart-arcs-gauge-unit\" style=\"text-anchor: middle; pointer-events: none;\" dy=\".75em\"></text><text class=\"c3-chart-arcs-gauge-min\" style=\"text-anchor: middle; pointer-events: none;\" dx=\"-168.31530197143553px\" dy=\"1.2em\">0</text><text class=\"c3-chart-arcs-gauge-max\" style=\"text-anchor: middle; pointer-events: none;\" dx=\"168.31530197143553px\" dy=\"1.2em\">100</text><g class=\"c3-chart-arc c3-target c3-target-eafrdraw\"><g class=\"c3-shapes c3-shapes-eafrdraw c3-arcs c3-arcs-eafrdraw\"><path class=\"c3-shape c3-shape c3-arc c3-arc-eafrdraw\" style=\"fill: rgb(31, 119, 180); cursor: pointer;\" transform=\"\" d=\"M-210.39412746429443,-2.5765849475854842e-14L-126.23647647857665,-1.5459509685512902e-14Z\"></path><rect class=\"c3-arc-label-line c3-target c3-target-eafrdraw\" style=\"display: none;\"></rect></g><text dy=\"-.1em\" style=\"opacity: 1; text-anchor: middle; pointer-events: none; font-size: 42px;\" class=\"c3-gauge-value\" transform=\"\">0.0%</text></g></g><g class=\"c3-chart-texts\"><g class=\"c3-chart-text c3-target c3-target-eafrdraw\" style=\"opacity: 1; pointer-events: none;\"><g class=\"c3-texts c3-texts-eafrdraw\"></g></g></g></g><g clip-path=\"url(http://widestage.clairelab-koha.test.biblibre.eu/#c3-1571669312243-clip-grid)\" class=\"c3-grid c3-grid-lines\"><g class=\"c3-xgrid-lines\"></g><g class=\"c3-ygrid-lines\"></g></g><g class=\"c3-axis c3-axis-x\" clip-path=\"url(http://widestage.clairelab-koha.test.biblibre.eu/#c3-1571669312243-clip-xaxis)\" transform=\"translate(0,275.5500030517578)\" style=\"visibility: visible; opacity: 0;\"><text class=\"c3-axis-x-label\" transform=\"\" style=\"text-anchor: end;\" x=\"562.0833740234375\" dx=\"-0.5em\" dy=\"-0.5em\"></text><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(282, 0)\"><line x1=\"0\" x2=\"0\" y2=\"6\"></line><text x=\"0\" y=\"9\" transform=\"\" style=\"text-anchor: middle; display: block;\"><tspan x=\"0\" dy=\".71em\" dx=\"0\">0</tspan></text></g><path class=\"domain\" d=\"M0,6V0H562.0833740234375V6\"></path></g><g class=\"c3-axis c3-axis-y\" clip-path=\"url(http://widestage.clairelab-koha.test.biblibre.eu/#c3-1571669312243-clip-yaxis)\" transform=\"translate(0,0)\" style=\"visibility: visible; opacity: 0;\"><text class=\"c3-axis-y-label\" transform=\"rotate(-90)\" style=\"text-anchor: end;\" x=\"0\" dx=\"-0.5em\" dy=\"1.2em\"></text><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,139)\"><line x2=\"-6\"></line><text x=\"-9\" y=\"0\" style=\"text-anchor: end;\"><tspan x=\"-9\" dy=\"3\">0</tspan></text></g><path class=\"domain\" d=\"M-6,1H0V275.5500030517578H-6\"></path></g><g class=\"c3-axis c3-axis-y2\" transform=\"translate(562.0833740234375,0)\" style=\"visibility: hidden; opacity: 0;\"><text class=\"c3-axis-y2-label\" transform=\"rotate(-90)\" style=\"text-anchor: end;\" x=\"0\" dx=\"-0.5em\" dy=\"-0.5em\"></text><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,276)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">0</tspan></text></g><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,249)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">0.1</tspan></text></g><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,221)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">0.2</tspan></text></g><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,194)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">0.3</tspan></text></g><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,166)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">0.4</tspan></text></g><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,139)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">0.5</tspan></text></g><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,111)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">0.6</tspan></text></g><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,84)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">0.7</tspan></text></g><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,56)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">0.8</tspan></text></g><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,29)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">0.9</tspan></text></g><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(0,1)\"><line x2=\"6\"></line><text x=\"9\" y=\"0\" style=\"text-anchor: start;\"><tspan x=\"9\" dy=\"3\">1</tspan></text></g><path class=\"domain\" d=\"M6,1H0V275.5500030517578H6\"></path></g></g><g transform=\"translate(0.5,300.5)\" style=\"visibility: hidden;\"><g clip-path=\"url(http://widestage.clairelab-koha.test.biblibre.eu/#c3-1571669312243-clip-subchart)\" class=\"c3-chart\"><g class=\"c3-chart-bars\"></g><g class=\"c3-chart-lines\"></g></g><g clip-path=\"url(http://widestage.clairelab-koha.test.biblibre.eu/#c3-1571669312243-clip)\" class=\"c3-brush\" fill=\"none\" pointer-events=\"all\"><rect class=\"overlay\" pointer-events=\"all\" cursor=\"crosshair\" x=\"0\" y=\"0\" width=\"562.0833740234375\" height=\"0\"></rect><rect class=\"selection\" cursor=\"move\" fill=\"#777\" fill-opacity=\"0.3\" stroke=\"#fff\" shape-rendering=\"crispEdges\" style=\"display: none;\"></rect><rect class=\"handle handle--e\" cursor=\"ew-resize\" style=\"display: none;\"></rect><rect class=\"handle handle--w\" cursor=\"ew-resize\" style=\"display: none;\"></rect></g><g class=\"c3-axis-x\" transform=\"translate(0,0)\" clip-path=\"url(http://widestage.clairelab-koha.test.biblibre.eu/#c3-1571669312243-clip-xaxis)\" style=\"opacity: 0;\"><g class=\"tick\" style=\"opacity: 1;\" transform=\"translate(282, 0)\"><line x1=\"0\" x2=\"0\" y2=\"6\"></line><text x=\"0\" y=\"9\" transform=\"\" style=\"text-anchor: middle; display: block;\"><tspan x=\"0\" dy=\".71em\" dx=\"0\">0</tspan></text></g><path class=\"domain\" d=\"M0,6V0H562.0833740234375V6\"></path></g></g><g transform=\"translate(0,279.5500030517578)\"><g class=\"c3-legend-item c3-legend-item-eafrdraw\" style=\"visibility: visible; cursor: pointer;\"><text style=\"pointer-events: none;\" x=\"259.74169158935547\" y=\"9\">eafrdraw</text><rect class=\"c3-legend-item-event\" style=\"fill-opacity: 0;\" x=\"245.74169158935547\" y=\"-5\" width=\"70.59999084472656\" height=\"20.449996948242188\"></rect><line class=\"c3-legend-item-tile\" style=\"stroke: rgb(31, 119, 180); pointer-events: none;\" x1=\"243.74169158935547\" y1=\"4\" x2=\"253.74169158935547\" y2=\"4\" stroke-width=\"10\"></line></g></g><text class=\"c3-title\" x=\"281.04168701171875\" y=\"0\"></text></svg><div class=\"c3-tooltip-container\" style=\"position: absolute; pointer-events: none; display: none;\"></div></div></div><div ng-show=\"loading\" class=\"container-fluid ng-scope ng-hide\"><h3 class=\"ng-binding\"><img src=\"/images/loader.gif\" width=\"32px\" height=\"32px\">Repainting report ...</h3></div></div></div></div></div></div><div class=\"col-md-6 ndContainer\" ndtype=\"column\"><h3 class=\"editable\" data-tc-id=\"w-0.838812326961261\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-width: 1px; border-style: solid; padding: 6px;\" tc-textcontent=\"true\" contenteditable=\"true\">Qualité des données</h3><p page-block=\"\" class=\"editable\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.6032518022171638\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 14px;\" contenteditable=\"true\">Score de renseignement des zones de catalogage des notices \nbibliographiques. Il sera disponible ultérieurement. Sa méthode de \ncalcul ingénieuse sera également transmise plus tard ;)</p><div page-block=\"\" class=\"Block500\" ndtype=\"column\" drop=\"onDropObject($data, $event, 'order')\" drop-effect=\"copy\" drop-accept=\"['json/custom-object','json/column']\" tc-textcontent=\"true\" data-tc-id=\"w-0.6549551487224184\" style=\"height: 322px;\" contenteditable=\"false\"><div page-block=\"\" class=\"container-fluid featurette ndContainer ng-scope\" ndtype=\"container\" style=\"height:100%;padding:0px;\"><div page-block=\"\" class=\"col-md-12 ndContainer\" ndtype=\"column\" style=\"height:100%;padding:0px;\"><div page-block=\"\" class=\"container-fluid ng-isolate-scope\" id=\"REPORT_CONTAINER_77c1e1c7-45bc-49f0-be09-1169a93ee252\" report-view=\"\" report=\"getReport('77c1e1c7-45bc-49f0-be09-1169a93ee252')\" style=\"padding: 0px; position: relative; height: 100%; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 42px; text-align: center;\" tc-textcontent=\"true\" data-tc-id=\"w-0.8876287994739946\" contenteditable=\"false\"><div class=\"report-view ng-scope\" ng-hide=\"loading\" style=\"height:100%\"><div class=\"xe-widget xe-counter xe-counter-info\" data-count=\".num\" data-from=\"1000\" data-to=\"2470\" data-duration=\"4\" data-easing=\"true\">   <div class=\"xe-label\">       <div class=\"num\">★★☆☆☆</div>       <span style=\"color: #ccc;\"></span>   </div></div></div><div ng-show=\"loading\" class=\"container-fluid ng-scope ng-hide\"><h3 class=\"ng-binding\"><img src=\"/images/loader.gif\" width=\"32px\" height=\"32px\">Repainting report ...</h3></div></div></div></div></div></div></div><div page-block=\"\" class=\"container-fluid ndContainer ng-scope\" ndtype=\"container\" tc-textcontent=\"true\" data-tc-id=\"w-0.7942997224226785\" style=\"background: rgb(255, 255, 255) none repeat scroll 0% 0%; margin: 0px 30px;\" contenteditable=\"false\"><div page-block=\"\" class=\"col-md-6 ndContainer\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.20969164633338733\" contenteditable=\"false\"><h3 page-block=\"\" class=\"editable\" ndtype=\"header\" tc-textcontent=\"true\" data-tc-id=\"w-0.6063788301584945\" style=\"background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\" contenteditable=\"true\">Informations</h3><p page-block=\"\" class=\"editable\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.7500006296787384\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; text-align: left;\" contenteditable=\"true\">Plus de détails sur https://doc.biblibre.com/transition-bibliographique/start</p></div><div class=\"col-md-6 ndContainer\" ndtype=\"column\"><h3 page-block=\"\" class=\"editable\" ndtype=\"header\" tc-textcontent=\"true\" data-tc-id=\"w-0.043025409167662176\" style=\"background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\" contenteditable=\"true\">Crédits</h3><p page-block=\"\" class=\"editable\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.35629812759178436\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; text-align: initial;\" contenteditable=\"true\">Sponsorisé par BibLibre<br>Sources: https://github.com/biblibre/koha-plugin-transition-bibliographique<br></p></div></div>",
+        "rootStyle": "padding: 10px; background-image: none;"
+      },
+      "dashboardType": "DEFAULT",
+      "html": "<div class=\"container-fluid ndContainer ng-scope\" ndtype=\"container\" tc-textcontent=\"true\" data-tc-id=\"w-0.07438895139592738\" style=\"border-width: 1px; border-style: dashed; background: rgb(255, 255, 255) none repeat scroll 0% 0%; margin: 0px 30px;\"><div class=\"col-md-6 ndContainer\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.9119861831517914\"><h3 class=\"\" ndtype=\"header\" tc-textcontent=\"true\" data-tc-id=\"w-0.5889509499026002\" style=\"background: rgb(255, 255, 255) none repeat scroll 0% 0%; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; color: rgb(71, 74, 116);\"></h3><h1 class=\"\" data-tc-id=\"w-0.1998415541298949\" style=\"color: rgb(43, 32, 124); font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\" tc-textcontent=\"true\">Audit de votre catalogue</h1><div class=\"\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.6567491880037594\" style=\"border-width: 0px; padding: 10px 10px 0px;\"><div id=\"PROMPT_eabszrawequal\" class=\"ndContainer ng-scope\" ndtype=\"ndPrompt\"><app-filter-prompt is-prompt=\"true\" filter=\"prompts['eabszrawequal']\" on-change=\"promptChanged()\" get-query=\"getQueryForFilter\" class=\"ng-isolate-scope\"></app-filter-prompt></div></div></div><div class=\"col-md-6 ndContainer\" ndtype=\"column\"><h3 class=\"\" ndtype=\"header\" tc-textcontent=\"true\" data-tc-id=\"w-0.21427453661791107\" style=\"background: rgb(255, 255, 255) none repeat scroll 0% 0%;\"><br></h3><p class=\"\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.4834456561238665\" style=\"font-family: &quot;Arial Black&quot;, Gadget, sans-serif; color: rgb(71, 74, 116);\">Ce tableau de bord indique la présence de champs dans les grilles de \ncatalogage qui sont attendus pour la transition bibliographique, la \nquantité de données \"alignées\", des métriques quantitatives de \nrenseignement des notices bibliographiques. <br></p></div></div><div class=\"container-fluid ndContainer ng-scope\" ndtype=\"container\" tc-textcontent=\"true\" data-tc-id=\"w-0.7182177278854145\"><div class=\"col-md-6 ndContainer\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.31421546949105017\"><h3 class=\"\" data-tc-id=\"w-0.7289718435437528\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-width: 1px; border-style: solid; padding: 6px;\">Grille de catalogage</h3><p class=\"\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.5403288193934135\" style=\"color: rgb(71, 74, 116); font-size: 14px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\">Présence des champs mentionnés dans la grille de catalogage par défaut de Koha.<br><br></p><div class=\"\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.8257099471515486\" style=\"height: 272px;\"><div class=\"container-fluid featurette ndContainer ng-scope\" ndtype=\"container\" style=\"height:100%;padding:0px;\"><div class=\"col-md-12 ndContainer\" ndtype=\"column\" style=\"height:100%;padding:0px;\"><div class=\"container-fluid ng-isolate-scope\" id=\"REPORT_CONTAINER_cd3d3233-a2c2-4aef-95a9-7ae09de64046\" report-view=\"\" report=\"getReport('cd3d3233-a2c2-4aef-95a9-7ae09de64046')\" style=\"padding: 0px; position: relative; height: 100%; font-size: 10px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\" tc-textcontent=\"true\" data-tc-id=\"w-0.1745110190673239\"><div class=\"container-fluid\" ng-show=\"loading\"><h3 class=\"ng-binding\"><img src=\"/images/loader.gif\" width=\"32px\" height=\"32px\">{{loadingMessage}}</h3></div></div></div></div></div></div><div class=\"col-md-6 ndContainer\" ndtype=\"column\"><h3 class=\"\" data-tc-id=\"w-0.25210033775395113\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-width: 1px; border-style: solid; padding: 6px;\">État des notices bibliographiques</h3><p class=\"\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.35585155293489434\" style=\"font-family: &quot;Arial Black&quot;, Gadget, sans-serif; color: rgb(71, 74, 116); font-size: 14px;\">Nombre de notices bibliographique ayant le champs mentionné renseigné (sans notion de qualité de donnée).</p><div class=\"\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.9048530306777826\" style=\"height: 272px;\"><div class=\"container-fluid featurette ndContainer ng-scope\" ndtype=\"container\" style=\"height:100%;padding:0px;\"><div class=\"col-md-12 ndContainer\" ndtype=\"column\" style=\"height:100%;padding:0px;\"><div class=\"container-fluid ng-isolate-scope\" id=\"REPORT_CONTAINER_6f770f0c-6687-4d80-ab9e-3c32e15edb33\" report-view=\"\" report=\"getReport('6f770f0c-6687-4d80-ab9e-3c32e15edb33')\" style=\"padding: 0px; position: relative; height: 100%; font-size: 10px; text-align: left; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\" tc-textcontent=\"true\" data-tc-id=\"w-0.39933879510499914\"><div class=\"container-fluid\" ng-show=\"loading\"><h3 class=\"ng-binding\"><img src=\"/images/loader.gif\" width=\"32px\" height=\"32px\">{{loadingMessage}}</h3></div></div></div></div></div></div></div><div class=\"container-fluid ndContainer ng-scope\" ndtype=\"container\" tc-textcontent=\"true\" data-tc-id=\"w-0.7488297665932808\"><div class=\"col-md-6 ndContainer\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.5913446752745112\"><h3 class=\"\" data-tc-id=\"w-0.5087204925728087\" style=\"font-family: &quot;Arial Black&quot;, Gadget, sans-serif; color: rgb(71, 74, 116); background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-width: 1px; border-style: solid; padding: 6px;\" tc-textcontent=\"true\">Alignement</h3><p class=\"\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.025324936839793866\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 14px;\">Pourcentage de notices considérées comme \"alignées\" avec un réservoir \nnational, c'est à dire contenant un ARK BnF en 033$a ou un PPN Sudoc.<br></p><div class=\"\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.8633408727797003\"><div class=\"container-fluid featurette ndContainer ng-scope\" ndtype=\"container\" style=\"height:100%;padding:0px;\"><div class=\"col-md-12 ndContainer\" ndtype=\"column\" style=\"height:100%;padding:0px;\"><div class=\"container-fluid ng-isolate-scope\" id=\"REPORT_CONTAINER_2182ff52-a3a7-ab4b-1f1c-0388a036015b\" report-view=\"\" report=\"getReport('2182ff52-a3a7-ab4b-1f1c-0388a036015b')\" style=\"padding:0px;position: relative;height: 100%;font-size:30px;\" tc-textcontent=\"true\" data-tc-id=\"w-0.11085666491629875\"><div class=\"container-fluid\" ng-show=\"loading\"><h3 class=\"ng-binding\"><img src=\"/images/loader.gif\" width=\"32px\" height=\"32px\">{{loadingMessage}}</h3></div></div></div></div></div></div><div class=\"col-md-6 ndContainer\" ndtype=\"column\"><h3 class=\"\" data-tc-id=\"w-0.838812326961261\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border-width: 1px; border-style: solid; padding: 6px;\" tc-textcontent=\"true\">Qualité des données</h3><p class=\"\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.6032518022171638\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 14px;\">Score de renseignement des zones de catalogage des notices \nbibliographiques. Il sera disponible ultérieurement. Sa méthode de \ncalcul ingénieuse sera également transmise plus tard ;)</p><div class=\"\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.6549551487224184\" style=\"height: 322px;\"><div class=\"container-fluid featurette ndContainer ng-scope\" ndtype=\"container\" style=\"height:100%;padding:0px;\"><div class=\"col-md-12 ndContainer\" ndtype=\"column\" style=\"height:100%;padding:0px;\"><div class=\"container-fluid ng-isolate-scope\" id=\"REPORT_CONTAINER_77c1e1c7-45bc-49f0-be09-1169a93ee252\" report-view=\"\" report=\"getReport('77c1e1c7-45bc-49f0-be09-1169a93ee252')\" style=\"padding: 0px; position: relative; height: 100%; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 42px; text-align: center;\" tc-textcontent=\"true\" data-tc-id=\"w-0.8876287994739946\"><div class=\"container-fluid\" ng-show=\"loading\"><h3 class=\"ng-binding\"><img src=\"/images/loader.gif\" width=\"32px\" height=\"32px\">{{loadingMessage}}</h3></div></div></div></div></div></div></div><div class=\"container-fluid ndContainer ng-scope\" ndtype=\"container\" tc-textcontent=\"true\" data-tc-id=\"w-0.7942997224226785\" style=\"background: rgb(255, 255, 255) none repeat scroll 0% 0%; margin: 0px 30px;\"><div class=\"col-md-6 ndContainer\" ndtype=\"column\" tc-textcontent=\"true\" data-tc-id=\"w-0.20969164633338733\"><h3 class=\"\" ndtype=\"header\" tc-textcontent=\"true\" data-tc-id=\"w-0.6063788301584945\" style=\"background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\">Informations</h3><p class=\"\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.7500006296787384\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; text-align: left;\">Plus de détails sur https://doc.biblibre.com/transition-bibliographique/start</p></div><div class=\"col-md-6 ndContainer\" ndtype=\"column\"><h3 class=\"\" ndtype=\"header\" tc-textcontent=\"true\" data-tc-id=\"w-0.043025409167662176\" style=\"background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif;\">Crédits</h3><p class=\"\" ndtype=\"paragraph\" tc-textcontent=\"true\" data-tc-id=\"w-0.35629812759178436\" style=\"color: rgb(71, 74, 116); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; text-align: initial;\">Sponsorisé par BibLibre<br>Sources: https://github.com/biblibre/koha-plugin-transition-bibliographique<br></p></div></div>",
+      "companyID": "COMPID",
+      "nd_trash_deleted": false,
+      "reports": [
+        {
+          "history": [],
+          "_id": "5d5bb7ff9fa60c13578d0579",
+          "selectedLayerID": "5d5bb74b245c4b1351ee1e23",
+          "properties": {
+            "pivotKeys": {
+              "columns": [],
+              "rows": []
+            },
+            "_id": "5d5bb7ff664a09135e4759fe",
+            "columns": [
+              {
+                "_id": "5d5bbe489fa60c13578d05eb",
+                "elementName": "audit_id",
+                "id": "eahfnraw",
+                "elementLabel": "audit_id",
+                "collectionID": "Cagyn",
+                "elementID": "ahfn",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05ea",
+                "elementName": "timestamp",
+                "id": "eaiodraw",
+                "elementLabel": "timestamp",
+                "collectionID": "Cagyn",
+                "elementID": "aiod",
+                "elementType": "date",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05e9",
+                "elementName": "check_marcfield_009",
+                "id": "eajtvraw",
+                "elementLabel": "check_marcfield_009",
+                "collectionID": "Cagyn",
+                "elementID": "ajtv",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05e8",
+                "elementName": "check_marcfield_033a",
+                "id": "eakcsraw",
+                "elementLabel": "check_marcfield_033a",
+                "collectionID": "Cagyn",
+                "elementID": "akcs",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05e7",
+                "elementName": "check_marcfield_181c",
+                "id": "ealupraw",
+                "elementLabel": "check_marcfield_181c",
+                "collectionID": "Cagyn",
+                "elementID": "alup",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05e6",
+                "elementName": "check_marcfield_182c",
+                "id": "eamworaw",
+                "elementLabel": "check_marcfield_182c",
+                "collectionID": "Cagyn",
+                "elementID": "amwo",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05e5",
+                "elementName": "check_marcfield_183c",
+                "id": "eanabraw",
+                "elementLabel": "check_marcfield_183c",
+                "collectionID": "Cagyn",
+                "elementID": "anab",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05e4",
+                "elementName": "check_marcfield_219",
+                "id": "eaozdraw",
+                "elementLabel": "check_marcfield_219",
+                "collectionID": "Cagyn",
+                "elementID": "aozd",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05e3",
+                "elementName": "count_marcfield_009",
+                "id": "eapnuraw",
+                "elementLabel": "count_marcfield_009",
+                "collectionID": "Cagyn",
+                "elementID": "apnu",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05e2",
+                "elementName": "count_marcfield_033a",
+                "id": "eaqkrraw",
+                "elementLabel": "count_marcfield_033a",
+                "collectionID": "Cagyn",
+                "elementID": "aqkr",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05e1",
+                "elementName": "count_marcfield_181c",
+                "id": "earttraw",
+                "elementLabel": "count_marcfield_181c",
+                "collectionID": "Cagyn",
+                "elementID": "artt",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05e0",
+                "elementName": "count_marcfield_182c",
+                "id": "easqlraw",
+                "elementLabel": "count_marcfield_182c",
+                "collectionID": "Cagyn",
+                "elementID": "asql",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05df",
+                "elementName": "count_marcfield_183c",
+                "id": "eatgzraw",
+                "elementLabel": "count_marcfield_183c",
+                "collectionID": "Cagyn",
+                "elementID": "atgz",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05de",
+                "elementName": "count_marcfield_219",
+                "id": "eaulfraw",
+                "elementLabel": "count_marcfield_219",
+                "collectionID": "Cagyn",
+                "elementID": "aulf",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05dd",
+                "elementName": "count_bnf_ark",
+                "id": "eavajraw",
+                "elementLabel": "count_bnf_ark",
+                "collectionID": "Cagyn",
+                "elementID": "avaj",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05dc",
+                "elementName": "count_sudoc_ppn",
+                "id": "eawcoraw",
+                "elementLabel": "count_sudoc_ppn",
+                "collectionID": "Cagyn",
+                "elementID": "awco",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05db",
+                "elementName": "count_ids_in_033a",
+                "id": "eaxijraw",
+                "elementLabel": "count_ids_in_033a",
+                "collectionID": "Cagyn",
+                "elementID": "axij",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05da",
+                "elementName": "count_biblios",
+                "id": "eaybbraw",
+                "elementLabel": "count_biblios",
+                "collectionID": "Cagyn",
+                "elementID": "aybb",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05d9",
+                "elementName": "count_aligned_biblios",
+                "id": "eazvmraw",
+                "elementLabel": "count_aligned_biblios",
+                "collectionID": "Cagyn",
+                "elementID": "azvm",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05d8",
+                "elementName": "tb_score",
+                "id": "ebakeraw",
+                "elementLabel": "tb_score",
+                "collectionID": "Cagyn",
+                "elementID": "bake",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d5bbe489fa60c13578d05d7",
+                "elementName": "quality_score",
+                "id": "ebbhzraw",
+                "elementLabel": "quality_score",
+                "collectionID": "Cagyn",
+                "elementID": "bbhz",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              }
+            ],
+            "filters": [],
+            "order": [],
+            "xkeys": [],
+            "ykeys": [],
+            "height": 300,
+            "legendPosition": "bottom"
+          },
+          "reportType": "vertical-grid",
+          "reportName": "debug all data",
+          "id": "eb0c0a16-a710-b265-f41e-6963d2385b15"
+        },
+        {
+          "history": [],
+          "_id": "5d5bb7ff9fa60c13578d055f",
+          "id": "2182ff52-a3a7-ab4b-1f1c-0388a036015b",
+          "reportName": "alignement",
+          "reportType": "gauge",
+          "properties": {
+            "pivotKeys": {
+              "columns": [],
+              "rows": []
+            },
+            "_id": "5d5bb7ff664a09135e4759f7",
+            "columns": [],
+            "filters": [],
+            "order": [],
+            "xkeys": [],
+            "ykeys": [
+              {
+                "_id": "5d5bc2c9245c4b1351ee1fa8",
+                "elementName": "comp",
+                "id": "eafrdraw",
+                "elementLabel": "Aligned percentage",
+                "elementID": "afrd",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              }
+            ],
+            "maxValue": 100,
+            "legendPosition": "bottom",
+            "height": 300
+          },
+          "selectedLayerID": "5d5bb74b245c4b1351ee1e23"
+        },
+        {
+          "history": [],
+          "_id": "5d5e63569fa60c13578d0722",
+          "selectedLayerID": "5d5bb74b245c4b1351ee1e23",
+          "properties": {
+            "pivotKeys": {
+              "columns": [],
+              "rows": []
+            },
+            "_id": "5d5e63569fa60c13578d0723",
+            "columns": [
+              {
+                "_id": "5d5e63569fa60c13578d0729",
+                "elementName": "comp",
+                "id": "eadpmraw",
+                "elementLabel": "009",
+                "elementID": "adpm",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              },
+              {
+                "_id": "5dadc2353d3027127ae9656c",
+                "elementName": "comp",
+                "id": "eabzoraw",
+                "elementLabel": "010$a",
+                "elementID": "abzo",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              },
+              {
+                "_id": "5dadc2353d3027127ae9656b",
+                "elementName": "comp",
+                "id": "eaczmraw",
+                "elementLabel": "011$a",
+                "elementID": "aczm",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              },
+              {
+                "_id": "5d5e63569fa60c13578d0728",
+                "elementName": "comp",
+                "id": "eaehgraw",
+                "elementLabel": "033$a",
+                "elementID": "aehg",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              },
+              {
+                "_id": "5dadc2353d3027127ae96569",
+                "elementName": "comp",
+                "id": "eadefraw",
+                "elementLabel": "073$a",
+                "elementID": "adef",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              },
+              {
+                "_id": "5d5e63569fa60c13578d0727",
+                "elementName": "comp",
+                "id": "eabyrraw",
+                "elementLabel": "181$c",
+                "elementID": "abyr",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              },
+              {
+                "_id": "5d5e63569fa60c13578d0726",
+                "elementName": "comp",
+                "id": "eaccxraw",
+                "elementLabel": "182$c",
+                "elementID": "accx",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              },
+              {
+                "_id": "5d5e63569fa60c13578d0725",
+                "elementName": "comp",
+                "id": "eadoaraw",
+                "elementLabel": "183$c",
+                "elementID": "adoa",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              },
+              {
+                "_id": "5d5e63569fa60c13578d0724",
+                "elementName": "comp",
+                "id": "eaemyraw",
+                "elementLabel": "219",
+                "elementID": "aemy",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              }
+            ],
+            "filters": [
+              {
+                "criterion": {
+                  "textList": []
+                },
+                "_id": "5d710f4e63fea337041526ec",
+                "elementName": "comp",
+                "id": "eabszraw",
+                "elementLabel": "Date d'audit",
+                "elementID": "absz",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "filterPrompt": true,
+                "isCustom": true,
+                "promptMandatory": true
+              }
+            ],
+            "order": [],
+            "xkeys": [],
+            "ykeys": [],
+            "height": 300,
+            "legendPosition": "bottom"
+          },
+          "reportType": "vertical-grid",
+          "reportName": "grille de catalogage",
+          "id": "cd3d3233-a2c2-4aef-95a9-7ae09de64046"
+        },
+        {
+          "history": [],
+          "_id": "5d5e64f2664a09135e475c56",
+          "selectedLayerID": "5d5bb74b245c4b1351ee1e23",
+          "properties": {
+            "pivotKeys": {
+              "columns": [],
+              "rows": []
+            },
+            "_id": "5d5e64f2664a09135e475c57",
+            "columns": [
+              {
+                "_id": "5d67c172d67f7e34ab9ebaed",
+                "elementName": "count_marcfield_033a",
+                "id": "eaqkrraw",
+                "elementLabel": "Nombre de 033$a",
+                "collectionID": "Cagyn",
+                "elementID": "aqkr",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5d67c172d67f7e34ab9ebaec",
+                "elementName": "count_marcfield_009",
+                "id": "eapnuraw",
+                "elementLabel": "Nombre de 009",
+                "collectionID": "Cagyn",
+                "elementID": "apnu",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5dadc596cd50cc127f7ef490",
+                "elementName": "count_marcfield_010a",
+                "id": "e010araw",
+                "elementLabel": "Nombre de 010$a",
+                "collectionID": "Cagyn",
+                "elementID": "010a",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5dadc596cd50cc127f7ef48f",
+                "elementName": "check_marcfield_011a",
+                "id": "e01csraw",
+                "elementLabel": "Nombre de 011$a",
+                "collectionID": "Cagyn",
+                "elementID": "01cs",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5dadc596cd50cc127f7ef48e",
+                "elementName": "check_marcfield_073a",
+                "id": "e2kcsraw",
+                "elementLabel": "Nombre de 073$a",
+                "collectionID": "Cagyn",
+                "elementID": "2kcs",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5dadc596cd50cc127f7ef48d",
+                "elementName": "count_marcfield_181c",
+                "id": "earttraw",
+                "elementLabel": "Nombre de 181$c",
+                "collectionID": "Cagyn",
+                "elementID": "artt",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5dadc596cd50cc127f7ef48c",
+                "elementName": "count_marcfield_182c",
+                "id": "easqlraw",
+                "elementLabel": "Nombre de 182$c",
+                "collectionID": "Cagyn",
+                "elementID": "asql",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5dadc596cd50cc127f7ef48b",
+                "elementName": "count_marcfield_183c",
+                "id": "eatgzraw",
+                "elementLabel": "Nombre de 183$c",
+                "collectionID": "Cagyn",
+                "elementID": "atgz",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              },
+              {
+                "_id": "5dadc596cd50cc127f7ef48a",
+                "elementName": "count_marcfield_219",
+                "id": "eaulfraw",
+                "elementLabel": "Nombre de 219",
+                "collectionID": "Cagyn",
+                "elementID": "aulf",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal"
+              }
+            ],
+            "filters": [
+              {
+                "criterion": {
+                  "textList": [],
+                  "text1": "",
+                  "text2": ""
+                },
+                "_id": "5d91b83e562a2b12d2fcded9",
+                "elementName": "comp",
+                "id": "eabszraw",
+                "elementLabel": "Date d'audit",
+                "elementID": "absz",
+                "elementType": "string",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "filterPrompt": false,
+                "isCustom": true
+              }
+            ],
+            "order": [],
+            "xkeys": [],
+            "ykeys": [],
+            "height": 300,
+            "legendPosition": "bottom"
+          },
+          "reportType": "vertical-grid",
+          "reportName": "état des notices",
+          "id": "6f770f0c-6687-4d80-ab9e-3c32e15edb33"
+        },
+        {
+          "history": [],
+          "_id": "5d679880d67f7e34ab9eb8e4",
+          "selectedLayerID": "5d5bb74b245c4b1351ee1e23",
+          "properties": {
+            "pivotKeys": {
+              "columns": [],
+              "rows": []
+            },
+            "_id": "5d679880d67f7e34ab9eb8e5",
+            "columns": [
+              {
+                "_id": "5d679a71d67f7e34ab9eb941",
+                "elementName": "comp",
+                "id": "eabszraw",
+                "elementLabel": "Date d'audit",
+                "elementID": "absz",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              }
+            ],
+            "filters": [],
+            "order": [],
+            "xkeys": [],
+            "ykeys": [],
+            "height": 300,
+            "legendPosition": "bottom"
+          },
+          "reportType": "grid",
+          "reportName": "date des audits",
+          "id": "82db178c-2a82-4a88-8ffd-63d1fe21e525"
+        },
+        {
+          "history": [],
+          "_id": "5d67c172d67f7e34ab9ebadc",
+          "selectedLayerID": "5d5bb74b245c4b1351ee1e23",
+          "properties": {
+            "pivotKeys": {
+              "columns": [],
+              "rows": []
+            },
+            "_id": "5d67c172d67f7e34ab9ebadd",
+            "columns": [],
+            "filters": [],
+            "order": [],
+            "xkeys": [],
+            "ykeys": [
+              {
+                "_id": "5d67c172d67f7e34ab9ebade",
+                "elementName": "comp",
+                "id": "eacrrraw",
+                "elementLabel": "Quality score",
+                "elementID": "acrr",
+                "layerID": "5d5bb74b245c4b1351ee1e23",
+                "filterType": "equal",
+                "isCustom": true
+              }
+            ],
+            "height": 300,
+            "legendPosition": "bottom"
+          },
+          "reportType": "indicator",
+          "reportName": "quality score",
+          "id": "77c1e1c7-45bc-49f0-be09-1169a93ee252"
+        }
+      ],
+      "__v": 0,
+      "owner": "5c98a27e7eb1c83c6e972142",
+      "isPublic": false,
+      "isShared": true,
+      "author": "administrator",
+      "createdBy": "5c98a27e7eb1c83c6e972142",
+      "createdOn": "2019-12-19T14:07:47.681Z",
+      "parentFolder": "6d80903e-e1a3-485b-8faa-838d730470d4"
+    }
+  ],
+  "layers": [
+    {
+      "params": {
+        "joins": [],
+        "schema": [
+          {
+            "elements": [
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e39",
+                "elementName": "audit_id",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "audit_id",
+                "data_type": "int",
+                "elementID": "ahfn",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e38",
+                "elementName": "timestamp",
+                "elementType": "date",
+                "visible": true,
+                "elementLabel": "timestamp",
+                "data_type": "timestamp",
+                "elementID": "aiod",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e37",
+                "elementName": "check_marcfield_009",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "check_marcfield_009",
+                "data_type": "tinyint",
+                "elementID": "ajtv",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "0d5bb7c6245c4b1351ee1e36",
+                "elementName": "check_marcfield_010a",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "check_marcfield_010a",
+                "data_type": "tinyint",
+                "elementID": "0kcs",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "015bb7c6245c4b1351ee1e36",
+                "elementName": "check_marcfield_011a",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "Nombre de 011$a",
+                "data_type": "tinyint",
+                "elementID": "01cs",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "component": 1,
+                "elementRole": "dimension"
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e36",
+                "elementName": "check_marcfield_033a",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "check_marcfield_033a",
+                "data_type": "tinyint",
+                "elementID": "akcs",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "025bb7c6245c4b1351ee1e36",
+                "elementName": "check_marcfield_073a",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "Nombre de 073$a",
+                "data_type": "tinyint",
+                "elementID": "2kcs",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "component": 1,
+                "elementRole": "dimension"
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e35",
+                "elementName": "check_marcfield_181c",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "check_marcfield_181c",
+                "data_type": "tinyint",
+                "elementID": "alup",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e34",
+                "elementName": "check_marcfield_182c",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "check_marcfield_182c",
+                "data_type": "tinyint",
+                "elementID": "amwo",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e33",
+                "elementName": "check_marcfield_183c",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "check_marcfield_183c",
+                "data_type": "tinyint",
+                "elementID": "anab",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e32",
+                "elementName": "check_marcfield_219",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "check_marcfield_219",
+                "data_type": "tinyint",
+                "elementID": "aozd",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e31",
+                "elementName": "count_marcfield_009",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_marcfield_009",
+                "data_type": "int",
+                "elementID": "apnu",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "010ab7c6245c4b1351ee1e30",
+                "elementName": "count_marcfield_010a",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_marcfield_010a",
+                "data_type": "int",
+                "elementID": "010a",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "component": 1,
+                "elementRole": "dimension"
+              },
+              {
+                "_id": "011ab7c6245c4b1351ee1e30",
+                "elementName": "count_marcfield_011a",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_marcfield_011a",
+                "data_type": "int",
+                "elementID": "011a",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e30",
+                "elementName": "count_marcfield_033a",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_marcfield_033a",
+                "data_type": "int",
+                "elementID": "aqkr",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "073ab7c6245c4b1351ee1e30",
+                "elementName": "count_marcfield_073a",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_marcfield_073a",
+                "data_type": "int",
+                "elementID": "073a",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e2f",
+                "elementName": "count_marcfield_181c",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_marcfield_181c",
+                "data_type": "int",
+                "elementID": "artt",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e2e",
+                "elementName": "count_marcfield_182c",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_marcfield_182c",
+                "data_type": "int",
+                "elementID": "asql",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e2d",
+                "elementName": "count_marcfield_183c",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_marcfield_183c",
+                "data_type": "int",
+                "elementID": "atgz",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e2c",
+                "elementName": "count_marcfield_219",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_marcfield_219",
+                "data_type": "int",
+                "elementID": "aulf",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e2b",
+                "elementName": "count_bnf_ark",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_bnf_ark",
+                "data_type": "int",
+                "elementID": "avaj",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e2a",
+                "elementName": "count_sudoc_ppn",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_sudoc_ppn",
+                "data_type": "int",
+                "elementID": "awco",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e29",
+                "elementName": "count_ids_in_033a",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_ids_in_033a",
+                "data_type": "int",
+                "elementID": "axij",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e28",
+                "elementName": "count_biblios",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_biblios",
+                "data_type": "int",
+                "elementID": "aybb",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e27",
+                "elementName": "count_aligned_biblios",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "count_aligned_biblios",
+                "data_type": "int",
+                "elementID": "azvm",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e26",
+                "elementName": "tb_score",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "tb_score",
+                "data_type": "int",
+                "elementID": "bake",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              },
+              {
+                "_id": "5d5bb7c6245c4b1351ee1e25",
+                "elementName": "quality_score",
+                "elementType": "string",
+                "visible": true,
+                "elementLabel": "quality_score",
+                "data_type": "int",
+                "elementID": "bbhz",
+                "collectionID": "Cagyn",
+                "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+                "elementRole": "dimension",
+                "component": 1
+              }
+            ],
+            "_id": "5d5bb7c6245c4b1351ee1e24",
+            "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+            "visible": true,
+            "collectionLabel": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+            "collectionID": "Cagyn",
+            "component": 1,
+            "left": 167,
+            "top": 79
+          }
+        ]
+      },
+      "_id": "5d5bb74b245c4b1351ee1e23",
+      "status": "active",
+      "name": "Plugin audit_tb",
+      "datasourceID": "5c98a2ea2bae1b3c6865a6cb",
+      "companyID": "COMPID",
+      "nd_trash_deleted": false,
+      "objects": [
+        {
+          "_id": "5d5bc0b75395dd1356131f76",
+          "elementLabel": "raw",
+          "elementRole": "folder",
+          "elementID": "Fabgl",
+          "elements": [
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e39",
+              "elementName": "audit_id",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "audit_id",
+              "data_type": "int",
+              "elementID": "ahfn",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e30",
+              "elementName": "count_marcfield_033a",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "Nombre de 033$a",
+              "data_type": "int",
+              "elementID": "aqkr",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1,
+              "description": "count_marcfield_033a"
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e31",
+              "elementName": "count_marcfield_009",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "Nombre de 009",
+              "data_type": "int",
+              "elementID": "apnu",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "010ab7c6245c4b1351ee1e30",
+              "elementName": "count_marcfield_010a",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "Nombre de 010$a",
+              "data_type": "int",
+              "elementID": "010a",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "component": 1,
+              "elementRole": "dimension"
+            },
+            {
+              "_id": "015bb7c6245c4b1351ee1e36",
+              "elementName": "check_marcfield_011a",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "Nombre de 011$a",
+              "data_type": "tinyint",
+              "elementID": "01cs",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "component": 1,
+              "elementRole": "dimension"
+            },
+            {
+              "_id": "025bb7c6245c4b1351ee1e36",
+              "elementName": "check_marcfield_073a",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "Nombre de 073$a",
+              "data_type": "tinyint",
+              "elementID": "2kcs",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "component": 1,
+              "elementRole": "dimension"
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e2f",
+              "elementName": "count_marcfield_181c",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "Nombre de 181$c",
+              "data_type": "int",
+              "elementID": "artt",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1,
+              "description": "count_marcfield_181c"
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e2e",
+              "elementName": "count_marcfield_182c",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "Nombre de 182$c",
+              "data_type": "int",
+              "elementID": "asql",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e2d",
+              "elementName": "count_marcfield_183c",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "Nombre de 183$c",
+              "data_type": "int",
+              "elementID": "atgz",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e2c",
+              "elementName": "count_marcfield_219",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "Nombre de 219",
+              "data_type": "int",
+              "elementID": "aulf",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e36",
+              "elementName": "check_marcfield_033a",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "check_marcfield_033a",
+              "data_type": "tinyint",
+              "elementID": "akcs",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e34",
+              "elementName": "check_marcfield_182c",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "check_marcfield_182c",
+              "data_type": "tinyint",
+              "elementID": "amwo",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e33",
+              "elementName": "check_marcfield_183c",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "check_marcfield_183c",
+              "data_type": "tinyint",
+              "elementID": "anab",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1,
+              "description": "check_marcfield_183c"
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e37",
+              "elementName": "check_marcfield_009",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "check_marcfield_009",
+              "data_type": "tinyint",
+              "elementID": "ajtv",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e32",
+              "elementName": "check_marcfield_219",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "check_marcfield_219",
+              "data_type": "tinyint",
+              "elementID": "aozd",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e35",
+              "elementName": "check_marcfield_181c",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "check_marcfield_181c",
+              "data_type": "tinyint",
+              "elementID": "alup",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1,
+              "description": ""
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e38",
+              "elementName": "timestamp",
+              "elementType": "date",
+              "visible": true,
+              "elementLabel": "timestamp",
+              "data_type": "timestamp",
+              "elementID": "aiod",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e29",
+              "elementName": "count_ids_in_033a",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "count_ids_in_033a",
+              "data_type": "int",
+              "elementID": "axij",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e25",
+              "elementName": "quality_score",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "quality_score",
+              "data_type": "int",
+              "elementID": "bbhz",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e2a",
+              "elementName": "count_sudoc_ppn",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "count_sudoc_ppn",
+              "data_type": "int",
+              "elementID": "awco",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e28",
+              "elementName": "count_biblios",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "count_biblios",
+              "data_type": "int",
+              "elementID": "aybb",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e27",
+              "elementName": "count_aligned_biblios",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "count_aligned_biblios",
+              "data_type": "int",
+              "elementID": "azvm",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e2b",
+              "elementName": "count_bnf_ark",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "count_bnf_ark",
+              "data_type": "int",
+              "elementID": "avaj",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            },
+            {
+              "_id": "5d5bb7c6245c4b1351ee1e26",
+              "elementName": "tb_score",
+              "elementType": "string",
+              "visible": true,
+              "elementLabel": "tb_score",
+              "data_type": "int",
+              "elementID": "bake",
+              "collectionID": "Cagyn",
+              "collectionName": "koha_plugin_com_biblibre_transitionbibliographique_audit_tb",
+              "elementRole": "dimension",
+              "component": 1
+            }
+          ]
+        },
+        {
+          "_id": "5d5bc0b75395dd1356131f72",
+          "elementLabel": "custom",
+          "elementRole": "folder",
+          "elementID": "Facrv",
+          "elements": [
+            {
+              "_id": "5d67998f09423134a58743da",
+              "isCustom": true,
+              "elementID": "absz",
+              "viewExpression": "SUBSTRING(#aiod,1,10)",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "Date d'audit",
+              "elementRole": "dimension",
+              "elementType": "string"
+            },
+            {
+              "_id": "5d5bc0b75395dd1356131f75",
+              "isCustom": true,
+              "elementID": "adpm",
+              "viewExpression": "IF(#ajtv,'✓', '✗')",
+              "elementName": "comp",
+              "component": 1,
+              "elementRole": "dimension",
+              "elementLabel": "009"
+            },
+            {
+              "_id": "5dadc1e05e4a1e12802d5991",
+              "isCustom": true,
+              "elementID": "abzo",
+              "viewExpression": "IF(#0kcs,'✓', '✗')",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "010$a",
+              "elementRole": "dimension"
+            },
+            {
+              "_id": "5dadc1e05e4a1e12802d5990",
+              "isCustom": true,
+              "elementID": "aczm",
+              "viewExpression": "IF(#01cs,'✓', '✗')",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "011$a",
+              "elementRole": "dimension"
+            },
+            {
+              "_id": "5d5bc0b75395dd1356131f74",
+              "isCustom": true,
+              "elementID": "aehg",
+              "viewExpression": "IF(#akcs,'✓', '✗')",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "033$a",
+              "elementRole": "dimension"
+            },
+            {
+              "_id": "5dadc1e05e4a1e12802d598e",
+              "isCustom": true,
+              "elementID": "adef",
+              "viewExpression": "IF(#2kcs,'✓', '✗')",
+              "elementName": "comp",
+              "component": 1,
+              "elementRole": "dimension",
+              "elementLabel": "073$a"
+            },
+            {
+              "_id": "5d5e61965395dd13561322f3",
+              "isCustom": true,
+              "elementID": "abyr",
+              "viewExpression": "IF(#alup,'✓', '✗')",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "181$c",
+              "elementRole": "dimension"
+            },
+            {
+              "_id": "5d5e61965395dd13561322f2",
+              "isCustom": true,
+              "elementID": "accx",
+              "viewExpression": "IF(#amwo,'✓', '✗')",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "182$c",
+              "elementRole": "dimension"
+            },
+            {
+              "_id": "5d5e61965395dd13561322f1",
+              "isCustom": true,
+              "elementID": "adoa",
+              "viewExpression": "IF(#anab,'✓', '✗')",
+              "elementName": "comp",
+              "component": 1,
+              "elementRole": "dimension",
+              "elementLabel": "183$c"
+            },
+            {
+              "_id": "5d5e61965395dd13561322f0",
+              "isCustom": true,
+              "elementID": "aemy",
+              "viewExpression": "IF(#aozd,'✓', '✗')",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "219",
+              "elementRole": "dimension"
+            },
+            {
+              "_id": "5d5bc0b75395dd1356131f73",
+              "isCustom": true,
+              "elementID": "afrd",
+              "viewExpression": "((#azvm * 100) / #aybb)",
+              "elementName": "comp",
+              "component": 1,
+              "elementLabel": "Aligned percentage",
+              "elementRole": "dimension"
+            },
+            {
+              "_id": "5d67c0cbd67f7e34ab9ebaa7",
+              "isCustom": true,
+              "elementID": "acrr",
+              "viewExpression": "IF(#bbhz,#bbhz,'★★☆☆☆')",
+              "elementName": "comp",
+              "elementLabel": "Quality score",
+              "component": 1,
+              "elementRole": "dimension"
+            }
+          ]
+        }
+      ],
+      "__v": 0
+    }
+  ],
+  "datasources": [
+    {
+      "_id": "5c98a2ea2bae1b3c6865a6cb",
+      "connection": {
+        "database": "koha",
+        "port": "3306",
+        "host": "localhost",
+        "password": "o6fvtVUbc2",
+        "userName": "kohaadmin"
+      },
+      "packetSize": 500,
+      "status": 1,
+      "type": "MySQL",
+      "name": "koha",
+      "companyID": "COMPID",
+      "nd_trash_deleted": false,
+      "__v": 0
+    }
+  ]
+}

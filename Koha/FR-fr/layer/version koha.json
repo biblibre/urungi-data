@@ -1,0 +1,74 @@
+{
+  "reports": [],
+  "dashboards": [],
+  "layers": [
+    {
+      "params": {
+        "joins": [],
+        "schema": [
+          {
+            "elements": [
+              {
+                "collectionName": "Koha version",
+                "collectionID": "Cahho",
+                "elementID": "aioq",
+                "elementLabel": "Version Koha",
+                "visible": true,
+                "elementType": "string",
+                "elementName": "value",
+                "elementRole": "dimension",
+                "component": 1
+              }
+            ],
+            "component": 1,
+            "collectionID": "Cahho",
+            "sqlQuery": "SELECT CONCAT ('Koha version v',value) AS value FROM systempreferences WHERE variable=\"version\"",
+            "isSQL": true,
+            "collectionLabel": "Koha version",
+            "visible": true,
+            "collectionName": "Koha version"
+          }
+        ]
+      },
+      "_id": "5c45c4b6c4dcd1010e7f0dc2",
+      "status": "active",
+      "name": "Version Koha",
+      "companyID": "COMPID",
+      "nd_trash_deleted": false,
+      "__v": 0,
+      "objects": [
+        {
+          "collectionName": "Koha version",
+          "collectionID": "Cahho",
+          "elementID": "aioq",
+          "elementLabel": "Version Koha",
+          "visible": true,
+          "elementType": "string",
+          "elementName": "value",
+          "elementRole": "dimension",
+          "component": 1
+        }
+      ],
+      "datasourceID": "5c98a2ea2bae1b3c6865a6cb"
+    }
+  ],
+  "datasources": [
+    {
+      "_id": "5c98a2ea2bae1b3c6865a6cb",
+      "connection": {
+        "database": "koha",
+        "port": "3306",
+        "host": "localhost",
+        "password": "o6fvtVUbc2",
+        "userName": "kohaadmin"
+      },
+      "packetSize": 500,
+      "status": 1,
+      "type": "MySQL",
+      "name": "koha",
+      "companyID": "COMPID",
+      "nd_trash_deleted": false,
+      "__v": 0
+    }
+  ]
+}
